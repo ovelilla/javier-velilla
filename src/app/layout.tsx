@@ -10,7 +10,7 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 
-export const akrobat = localFont({
+const akrobat = localFont({
   src: "./fonts/akrobat-semibold.woff2",
 });
 
