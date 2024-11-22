@@ -70,14 +70,14 @@ const Insight = () => {
         </motion.div>
       </div>
       <motion.h2
-        className="flex flex-col font-noto text-[24px] text-white"
+        className="flex flex-col font-noto text-2xl text-white"
         ref={titleRef}
         style={{ opacity: titleOpacity }}
       >
         El otro lado de la mirada
       </motion.h2>
       <motion.p
-        className="hyphens-auto text-white"
+        className="hyphens-auto text-lg text-white"
         ref={paragraphRef1}
         style={{ opacity: paragraphOpacity1 }}
       >
@@ -89,7 +89,7 @@ const Insight = () => {
         percibirse.
       </motion.p>
       <motion.p
-        className="hyphens-auto text-white"
+        className="hyphens-auto text-lg text-white"
         ref={paragraphRef2}
         style={{ opacity: paragraphOpacity2 }}
       >
