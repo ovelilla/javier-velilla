@@ -8,8 +8,6 @@ import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 // Styles
 import "./embla.css";
-// Icons
-import { ChevronsRight } from "lucide-react";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
