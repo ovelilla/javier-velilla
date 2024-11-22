@@ -1,14 +1,12 @@
 // Vendors
+import localFont from "next/font/local";
 import type { Metadata } from "next";
 // Components
 import { Header } from "./components/header";
 // Fonts
 import "@fontsource-variable/noto-serif-display";
-import "@fontsource-variable/oswald";
 // Styles
 import "./globals.css";
-
-import localFont from "next/font/local";
 
 const akrobat = localFont({
   src: "./fonts/akrobat-semibold.woff2",

@@ -2,6 +2,7 @@
 
 // Vendors
 import { EmblaCarouselType, EmblaEventType } from "embla-carousel";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useCallback, useEffect, useRef } from "react";
@@ -9,14 +10,19 @@ import useEmblaCarousel from "embla-carousel-react";
 // Styles
 import "./embla.css";
 
+import { ChevronsRight } from "lucide-react";
+
 const TWEEN_FACTOR_BASE = 0.2;
 
 const Carousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    dragFree: true,
-    loop: true,
-    align: "start",
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      dragFree: true,
+      loop: true,
+      align: "start",
+    },
+    [Autoplay()],
+  );
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
 
@@ -139,12 +145,13 @@ const Carousel = () => {
       </div>
       <Link
         href="/galeria"
-        className="mx-6 flex h-12 items-center justify-center gap-2 rounded-lg bg-[#ecb67c] px-4 uppercase text-[#0c151f]"
+        className="mx-6 flex h-12 items-center justify-center gap-2 self-end rounded-full px-4 font-extrabold uppercase text-white"
       >
-        Ver más obras
+        Ver galería <ChevronsRight size={24} />
       </Link>
     </section>
   );
 };
 
 export { Carousel };
+// "mx-6 flex h-12 items-center justify-center gap-2 self-end rounded-full bg-[#ecb67c] px-8 uppercase text-[#0c151f] font-extrabold";
