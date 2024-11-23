@@ -6,7 +6,7 @@ import {
   motion,
   useScroll,
   useTransform,
-  AnimatePresence,
+  // AnimatePresence,
 } from "framer-motion";
 // Components
 import { Sidebar } from "./sidebar";
