@@ -19,18 +19,18 @@ const items = [
   },
   {
     id: 1,
-    title: "About",
-    link: "/about",
+    title: "Biografía",
+    link: "/biografia",
   },
   {
     id: 2,
-    title: "Gallery",
-    link: "/gallery",
+    title: "Galería",
+    link: "/galeria",
   },
   {
     id: 3,
-    title: "Contact",
-    link: "/contact",
+    title: "Contacto",
+    link: "/contacto",
   },
 ];
 
