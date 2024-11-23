@@ -4,7 +4,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Dispatch, SetStateAction } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import { motion, useScroll, useTransform } from "framer-motion";
+// Components
+import { Navigation } from "./navigation";
 
 const overlayVariants = {
   open: {
@@ -28,7 +29,7 @@ const sidebar = {
     clipPath: `circle(${height * 2 + 200}px at calc(100% - 48px) 56px)`,
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 10,
       restDelta: 2,
     },
   }),
@@ -36,8 +37,8 @@ const sidebar = {
     clipPath: "circle(32px at calc(100% - 48px) 56px)",
     transition: {
       type: "spring",
-      stiffness: 400,
-      damping: 40,
+      stiffness: 100,
+      damping: 20,
     },
   },
 };
@@ -54,12 +55,12 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
   const handleClick = () => {
     setOpen(false);
   };
-  console.log("hola");
+
   useEffect(() => {
-    if (containerRef.current) {
-      console.log(containerRef.current);
-      setHeight(containerRef.current.offsetHeight);
-    }
+    const updateHeight = () => setHeight(window.innerHeight);
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   return (
@@ -81,7 +82,9 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
             initial="closed"
             custom={height}
             variants={sidebar}
-          ></motion.div>
+          >
+            <Navigation />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
