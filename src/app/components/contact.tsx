@@ -29,9 +29,9 @@ const Contact = () => {
         <label className="flex flex-col gap-2">
           <span className="text-white">Mensaje</span>
           <textarea
-            className="rounded-md bg-[#1b2b3b] p-4 text-white focus:outline-none focus:ring focus:ring-white"
+            className="resize-none rounded-md bg-[#1b2b3b] p-4 text-white focus:outline-none focus:ring focus:ring-white"
             name="message"
-            rows={4}
+            rows={5}
           />
         </label>
 

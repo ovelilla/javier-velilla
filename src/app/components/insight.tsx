@@ -12,7 +12,6 @@ const Insight = () => {
   const paragraphRef2 = useRef(null);
   const citeRef = useRef(null);
 
-  // Scroll progress para cada elemento
   const { scrollYProgress: imageScrollProgress } = useScroll({
     target: imageRef,
     offset: ["start end", "end start"],
@@ -38,8 +37,7 @@ const Insight = () => {
     offset: ["start end", "end start"],
   });
 
-  // Animaciones específicas
-  const scaleImage = useTransform(imageScrollProgress, [0, 1], [1, 1.5]);
+  const scaleImage = useTransform(imageScrollProgress, [0, 1], [1, 1.4]);
   const titleOpacity = useTransform(titleScrollProgress, [0, 0.5], [0, 1]);
   const paragraphOpacity1 = useTransform(
     paragraphScrollProgress1,
