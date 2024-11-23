@@ -1,7 +1,7 @@
 "use client";
 
 // Vendors
-import { useState, useRef, useLayoutEffect, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Dispatch, SetStateAction } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 // import { motion, useScroll, useTransform } from "framer-motion";
