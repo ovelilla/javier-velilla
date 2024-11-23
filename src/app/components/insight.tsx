@@ -53,7 +53,10 @@ const Insight = () => {
 
   return (
     <section className="flex flex-col gap-8 bg-[#121d29] px-6 py-12">
-      <div className="relative aspect-[5/5] overflow-hidden" ref={imageRef}>
+      <div
+        className="relative aspect-[5/5] overflow-hidden rounded-3xl"
+        ref={imageRef}
+      >
         <motion.div
           className="absolute left-1/2 top-1/2 h-[100%] w-[100%] overflow-hidden [translate:-50%-50%]"
           style={{ scale: scaleImage }}
@@ -64,6 +67,7 @@ const Insight = () => {
             style={{ objectFit: "cover" }}
             priority
             src="/javier-velilla-pintando-estudio.jpg"
+            className=""
           />
         </motion.div>
       </div>
