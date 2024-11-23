@@ -7,7 +7,7 @@ import Image from "next/image";
 const Hero = () => {
   const { scrollY } = useScroll();
 
-  const yImage = useTransform(scrollY, [0, 600], [0, -100]);
+  const yImage = useTransform(scrollY, [0, 600], [0, -60]);
   const ySpan1 = useTransform(scrollY, [0, 500], [0, -300]);
   const ySpan2 = useTransform(scrollY, [0, 500], [0, -250]);
   const ySpan3 = useTransform(scrollY, [0, 500], [0, -200]);
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative h-20 shrink-0">
         <div className="absolute top-0 z-30 flex h-[calc(100dvh-7rem)] w-full flex-col">
           <div className="px-8">
-            <h1 className="flex scale-y-90 flex-col font-noto text-[42px] uppercase leading-[1.2] tracking-wide text-white">
+            <h1 className="flex scale-y-90 flex-col font-noto text-[48px] uppercase leading-[1.2] tracking-wide text-white">
               <motion.span
                 className="self-start"
                 style={{ y: ySpan1, opacity: opacitySpan1 }}
