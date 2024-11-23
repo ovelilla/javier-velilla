@@ -2,9 +2,29 @@
 
 // Vendors
 import { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 // Components
 import { Sidebar } from "./sidebar";
+
+const barVariants = {
+  close: {
+    rotate: 0,
+    y: 0,
+    x: 0,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
+  open: (custom: number) => ({
+    rotate: custom === 0 ? -45 : 45,
+    y: custom === 0 ? -6 : 6,
+    x: custom === 0 ? -6 : -6,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  }),
+};
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -25,11 +45,47 @@ const Header = () => {
           onClick={handleClick}
         >
           <div className="order-2 flex w-8 flex-col gap-2 md:order-1 md:w-12 md:gap-3">
-            <span className="border border-t-0"></span>
-            <span className="border border-t-0"></span>
+            <motion.span
+              className="border border-t-0"
+              custom={0}
+              style={{ transformOrigin: "right" }}
+              variants={barVariants}
+              animate={open ? "open" : "close"}
+              initial="close"
+            ></motion.span>
+            <motion.span
+              className="border border-t-0"
+              custom={1}
+              style={{ transformOrigin: "right" }}
+              variants={barVariants}
+              animate={open ? "open" : "close"}
+              initial="close"
+            ></motion.span>
           </div>
-          <div className="order-1 text-lg font-light uppercase leading-[1] text-white md:order-2">
-            {open ? "Close" : "Menu"}
+          <div className="order-1 flex items-center text-lg font-light uppercase leading-[1] text-white md:order-2">
+            <AnimatePresence mode="sync" initial={false}>
+              {open ? (
+                <motion.span
+                  key="close"
+                  initial={{ opacity: 0, position: "absolute" }}
+                  animate={{ opacity: 1, position: "relative" }}
+                  exit={{ opacity: 0, position: "absolute" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  Close
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="menu"
+                  initial={{ opacity: 0, position: "absolute" }}
+                  animate={{ opacity: 1, position: "relative" }}
+                  exit={{ opacity: 0, position: "absolute" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  Menu
+                </motion.span>
+              )}
+            </AnimatePresence>
           </div>
         </motion.button>
 
