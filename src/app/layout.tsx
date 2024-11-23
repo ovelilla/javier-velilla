@@ -88,7 +88,7 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="relative h-64">
+          <div className="relative h-72">
             <Image
               alt="Retiro"
               fill

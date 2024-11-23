@@ -71,10 +71,10 @@ const Hero = () => {
 
       <div className="relative flex h-full items-center justify-center overflow-hidden">
         <motion.div
-          className="absolute left-1/2 top-1/2 h-[140%] w-[140%] overflow-hidden [translate:-50%-50%]"
+          className="absolute left-1/2 top-1/2 h-[120%] w-[140%] overflow-hidden [translate:-50%-50%]"
           style={{ y: yImage }}
         >
-          <div className="absolute inset-0 z-10 bg-black/20"></div>
+          {/* <div className="absolute inset-0 z-10 bg-black/20"></div> */}
 
           <Image
             alt="Retiro"
