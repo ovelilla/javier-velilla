@@ -1,7 +1,7 @@
 "use client";
 
 // Vendors
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -20,7 +20,7 @@ const barVariants = {
   },
   open: (custom: number) => ({
     rotate: custom === 0 ? -45 : 45,
-    y: custom === 0 ? -6 : 6,
+    y: custom === 0 ? -7 : 7,
     x: custom === 0 ? -6 : -6,
     transition: { duration: 0.3, ease: "easeInOut" },
   }),
@@ -36,11 +36,19 @@ const Header = () => {
     setOpen(!open);
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
+
   return (
     <header className="flex h-28 overflow-hidden bg-[#0e1822] md:h-56">
       <div className="flex flex-1 items-center justify-end px-8">
         <motion.button
-          className="z-50 flex h-[88px] w-[88px] items-center gap-4 rounded-full md:gap-6"
+          className="z-50 flex h-[88px] items-center gap-4 rounded-full md:gap-6"
           style={{ x: xButton, opacity: opacityButton }}
           onClick={handleClick}
         >
@@ -63,29 +71,30 @@ const Header = () => {
             ></motion.span>
           </div>
           <div className="order-1 flex items-center text-lg font-light uppercase leading-[1] text-white md:order-2">
-            <AnimatePresence mode="sync" initial={false}>
-              {open ? (
+            {/* <AnimatePresence mode="wait" initial={false}> */}
+            {/* {open ? (
                 <motion.span
                   key="close"
-                  initial={{ opacity: 0, position: "absolute" }}
-                  animate={{ opacity: 1, position: "relative" }}
-                  exit={{ opacity: 0, position: "absolute" }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0,  }}
+                  animate={{ opacity: 1,  }}
+                  exit={{ opacity: 0,  }}
+                  transition={{ duration: 0.15 }}
                 >
-                  Close
+                  Cerrar
                 </motion.span>
               ) : (
                 <motion.span
                   key="menu"
-                  initial={{ opacity: 0, position: "absolute" }}
-                  animate={{ opacity: 1, position: "relative" }}
-                  exit={{ opacity: 0, position: "absolute" }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0,  }}
+                  animate={{ opacity: 1,  }}
+                  exit={{ opacity: 0,  }}
+                  transition={{ duration: 0.15 }}
                 >
                   Menu
                 </motion.span>
-              )}
-            </AnimatePresence>
+              )} */}
+            {/* </AnimatePresence> */}
+            {open ? "Cerrar" : "Menu"}
           </div>
         </motion.button>
 
