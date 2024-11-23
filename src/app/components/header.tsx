@@ -9,8 +9,8 @@ const Header = () => {
   const opacityButton = useTransform(scrollY, [0, 200], [1, 0]);
 
   return (
-    <header className="flex h-28 overflow-hidden bg-[#121d29] md:h-56">
-      <div className="flex flex-1 items-center justify-end px-6">
+    <header className="flex h-28 overflow-hidden bg-[#0e1822] md:h-56">
+      <div className="flex flex-1 items-center justify-end px-8">
         <motion.button
           className="flex h-12 items-center gap-4 md:gap-6"
           style={{ x: xButton, opacity: opacityButton }}

@@ -37,7 +37,7 @@ const Insight = () => {
     offset: ["start end", "end start"],
   });
 
-  const scaleImage = useTransform(imageScrollProgress, [0, 1], [1, 1.4]);
+  const scaleImage = useTransform(imageScrollProgress, [0, 1], [1, 1.3]);
   const titleOpacity = useTransform(titleScrollProgress, [0, 0.5], [0, 1]);
   const paragraphOpacity1 = useTransform(
     paragraphScrollProgress1,
@@ -52,9 +52,9 @@ const Insight = () => {
   const citeOpacity = useTransform(citeScrollProgress, [0, 0.5], [0, 1]);
 
   return (
-    <section className="flex flex-col gap-8 bg-[#121d29] px-6 py-12">
+    <section className="flex flex-col gap-8 bg-[#121d29] px-8 py-12">
       <div
-        className="relative aspect-[5/5] overflow-hidden rounded-3xl"
+        className="relative aspect-[4/3] overflow-hidden rounded-3xl"
         ref={imageRef}
       >
         <motion.div

@@ -93,7 +93,7 @@ const Carousel = () => {
 
   return (
     <section className="flex flex-col gap-12 bg-[#0c151f] py-12">
-      <h2 className="flex flex-col px-6 font-noto text-2xl leading-[1.3] text-white">
+      <h2 className="flex flex-col px-8 font-noto text-2xl leading-[1.3] text-white">
         Ecos del Arte
       </h2>
       <div className="embla">
@@ -145,7 +145,7 @@ const Carousel = () => {
       </div>
       <Link
         href="/galeria"
-        className="mx-6 flex h-12 items-center justify-center gap-2 self-end rounded-full px-4 text-lg font-extrabold uppercase text-white"
+        className="mx-8 flex h-12 items-center justify-center gap-2 self-end rounded-full text-lg font-extrabold uppercase text-white"
       >
         Ver galería <ChevronsRight size={24} />
       </Link>

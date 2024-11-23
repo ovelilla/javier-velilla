@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="flex flex-col gap-12 bg-[#121d29] px-6 pb-16 pt-12">
+    <section className="flex flex-col gap-12 bg-[#121d29] px-8 pb-16 pt-12">
       <h2 className="flex flex-col font-noto text-2xl leading-[1.3] text-white">
         Contacto
       </h2>

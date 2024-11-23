@@ -20,10 +20,10 @@ const Hero = () => {
   const opacityText2 = useTransform(scrollY, [0, 200], [1, 0]);
 
   return (
-    <section className="flex h-[calc(100vh-7rem)] flex-col bg-[#121d29]">
+    <section className="flex h-[calc(100vh-7rem)] flex-col bg-[#0e1822]">
       <div className="relative h-20 shrink-0">
         <div className="absolute top-0 z-30 flex h-[calc(100dvh-7rem)] w-full flex-col">
-          <div className="px-6">
+          <div className="px-8">
             <h1 className="flex scale-y-90 flex-col font-noto text-[42px] uppercase leading-[1.2] tracking-wide text-white">
               <motion.span
                 className="self-start"
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
 
           <div className="mt-auto overflow-hidden">
-            <div className="flex w-[90%] flex-col gap-6 p-6 pb-14">
+            <div className="flex w-[90%] flex-col gap-6 p-8 pb-14">
               <motion.div
                 className="text-[20px] font-light uppercase leading-[1] text-white"
                 style={{ x: xText1, opacity: opacityText1 }}
