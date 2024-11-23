@@ -93,7 +93,7 @@ const Carousel = () => {
 
   return (
     <section className="flex flex-col gap-12 bg-[#0c151f] py-12">
-      <h2 className="flex flex-col px-8 font-noto text-2xl leading-[1.3] text-white">
+      <h2 className="flex flex-col px-8 font-noto text-3xl leading-[1.3] text-white">
         Ecos del Arte
       </h2>
       <div className="embla">
