@@ -20,7 +20,7 @@ const Item = ({ alt, size, src }: ItemProps) => {
       className="gallery__item"
       data-src={src}
     >
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image src={src} alt={alt} width={width} height={height} loading="lazy" />
     </a>
   );
 };
