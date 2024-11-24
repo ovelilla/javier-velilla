@@ -90,7 +90,7 @@ const Footer = () => {
             fill
             style={{ objectFit: "cover" }}
             priority
-            src="/sin-nombre-000.jpg"
+            src="/galeria/imagen-000.jpg"
           />
 
           <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#0e1822] to-transparent"></div>
