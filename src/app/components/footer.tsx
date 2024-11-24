@@ -68,7 +68,7 @@ const Footer = () => {
                     href="https://facebook.com/javier.velilla"
                     className="flex h-10 w-10 items-center justify-center text-white"
                   >
-                    {/* <SiFacebook size={isSm ? (isMd ? 32 : 28) : 24} /> */}
+                    <SiFacebook size={isSm ? (isMd ? 32 : 28) : 24} />
                   </a>
                 </div>
               </div>
