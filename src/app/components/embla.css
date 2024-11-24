@@ -23,8 +23,9 @@
   }
 
   @media (min-width: 1536px) {
-    --slide-height: 680px;
+    --slide-height: 780px;
     --slide-size: 60%;
+    --slide-spacing: 2rem;
   }
 }
 .embla__viewport {
