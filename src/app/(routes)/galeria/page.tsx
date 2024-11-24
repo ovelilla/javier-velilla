@@ -7,20 +7,28 @@ import "./style.css";
 import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
 import lgVideo from "lightgallery/plugins/video";
-import fjGallery from "flickr-justified-gallery";
+// import fjGallery from "flickr-justified-gallery";
 
 import { Image } from "./components/image";
 
 const Gallery = () => {
   useEffect(() => {
-    fjGallery(document.querySelectorAll(".gallery"), {
-      itemSelector: ".gallery__item",
-      rowHeight: 420,
-      lastRow: "start",
-      gutter: 16,
-      rowHeightTolerance: 0.1,
-      calculateItemsHeight: false,
-    });
+    if (typeof window !== "undefined") {
+      import("flickr-justified-gallery").then((module) => {
+        const fjGallery = module.default;
+        const gallery = document.querySelectorAll(".gallery");
+        if (gallery.length > 0) {
+          fjGallery(gallery, {
+            itemSelector: ".gallery__item",
+            rowHeight: 420,
+            lastRow: "start",
+            gutter: 16,
+            rowHeightTolerance: 0.1,
+            calculateItemsHeight: false,
+          });
+        }
+      });
+    }
   }, []);
 
   return (
