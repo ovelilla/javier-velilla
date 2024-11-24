@@ -30,7 +30,7 @@ const items = [
   {
     id: 3,
     title: "Contacto",
-    link: "/contacto",
+    link: "/#contacto",
   },
 ];
 

@@ -74,9 +74,11 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 xl:h-36 xl:w-36 2xl:h-40 2xl:w-40" */}
+
             <div className="flex w-full basis-1/2 items-center justify-center">
-              <button className="relative flex h-60 w-60 flex-col items-center justify-center gap-2 rounded-full bg-[#f0bb81] text-3xl uppercase text-[#0e1822] transition-colors hover:text-white">
-                <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-[#f0bb81]"></div>
+              <button className="relative flex h-32 w-32 flex-col items-center justify-center lg:gap-2 rounded-full bg-[#f0bb81] text-xl lg:text-3xl uppercase text-[#0e1822] transition-colors hover:text-white lg:h-60 lg:w-60">
+                <div className="absolute left-1/2 top-1/2 h-36 h-64 w-36 w-64 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-[#f0bb81]"></div>
                 <span>Descargar</span>
                 <span>Portfolio</span>
               </button>

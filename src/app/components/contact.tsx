@@ -3,8 +3,11 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section className="flex flex-col items-center gap-12 bg-[#121d29] px-8 py-12 sm:px-12 sm:py-20 md:gap-16 md:px-16 md:py-28 md:text-4xl lg:gap-20 lg:px-24 lg:py-36 xl:px-32 xl:py-48 2xl:px-48 2xl:py-40">
-      <div className="flex max-w-screen-2xl w-full flex-col gap-12 md:gap-16 lg:flex-row lg:gap-20 xl:gap-36 2xl:gap-48">
+    <section
+      className="flex flex-col items-center gap-12 bg-[#121d29] px-8 py-12 sm:px-12 sm:py-20 md:gap-16 md:px-16 md:py-28 md:text-4xl lg:gap-20 lg:px-24 lg:py-36 xl:px-32 xl:py-48 2xl:px-48 2xl:py-40"
+      id="contacto"
+    >
+      <div className="flex w-full max-w-screen-2xl flex-col gap-12 md:gap-16 lg:flex-row lg:gap-20 xl:gap-36 2xl:gap-48">
         <div className="relative order-2 aspect-[4/3] basis-1/2 lg:order-1">
           <Image
             alt="Retiro"
@@ -67,7 +70,7 @@ const Contact = () => {
             </div>
 
             <button
-              className="mt-4 xl:mt-8 flex h-12 items-center justify-center rounded-md border-2 border-white bg-transparent px-6 text-lg text-white md:text-xl xl:h-14 xl:rounded-lg xl:text-2xl"
+              className="mt-4 flex h-12 items-center justify-center rounded-md border-2 border-white bg-transparent px-6 text-lg text-white md:text-xl xl:mt-8 xl:h-14 xl:rounded-lg xl:text-2xl"
               type="submit"
             >
               ENVIAR
