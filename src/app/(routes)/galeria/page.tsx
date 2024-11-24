@@ -2,17 +2,21 @@
 
 import { useEffect } from "react";
 
-import "./style.css";
+import "./css/style.css";
 import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
-import lgVideo from "lightgallery/plugins/video";
-// import fjGallery from "flickr-justified-gallery";
 
 import { Item } from "./components/item";
 
 import { IMAGES } from "./constants/gallery.constants";
 
+// Hooks
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+
 const Gallery = () => {
+  const isSm = useMediaQuery("(min-width: 640px)");
+  const isMd = useMediaQuery("(min-width: 768px)");
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       import("flickr-justified-gallery").then((module) => {
@@ -21,7 +25,7 @@ const Gallery = () => {
         if (gallery.length > 0) {
           fjGallery(gallery, {
             itemSelector: ".gallery__item",
-            rowHeight: 420,
+            rowHeight: isSm && !isMd ? 240 : isSm && isMd ? 280 : 180,
             lastRow: "start",
             gutter: 16,
             rowHeightTolerance: 0.1,
@@ -40,7 +44,7 @@ const Gallery = () => {
 
       <div>
         <LightGallery
-          plugins={[lgZoom, lgVideo]}
+          plugins={[lgZoom]}
           mode="lg-fade"
           pager={false}
           thumbnail={true}
@@ -49,8 +53,8 @@ const Gallery = () => {
           elementClassNames={"gallery"}
           mobileSettings={{
             controls: false,
-            showCloseIcon: false,
-            download: false,
+            showCloseIcon: true,
+            download: true,
             rotate: false,
           }}
         >
