@@ -76,7 +76,7 @@ const Header = () => {
 
   return (
     <header className="flex h-28 overflow-hidden bg-[#0e1822] sm:h-32 md:h-36">
-      <div className="flex flex-1 items-center justify-end px-8 sm:px-12 md:px-16">
+      <div className="flex flex-1 items-center justify-end px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-28">
         <motion.button
           className="z-50 flex h-[88px] items-center gap-4 rounded-full md:gap-6"
           style={{ x: xButton, opacity: opacityButton }}

@@ -9,12 +9,27 @@ import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 // Styles
 import "./embla.css";
+// Hooks
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 import { ChevronsRight } from "lucide-react";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
+const getIconSize = (isSm: boolean, isMd: boolean) => {
+  if (isSm && !isMd) {
+    return 28;
+  }
+  if (isSm && isMd) {
+    return 32;
+  }
+  return 24;
+};
+
 const Carousel = () => {
+  const isSm = useMediaQuery("(min-width: 640px)");
+  const isMd = useMediaQuery("(min-width: 768px)");
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       dragFree: true,
@@ -92,8 +107,8 @@ const Carousel = () => {
   }, [emblaApi, tweenParallax]);
 
   return (
-    <section className="flex flex-col gap-12 bg-[#0c151f] py-12">
-      <h2 className="flex flex-col px-8 font-noto text-3xl leading-[1.3] text-white">
+    <section className="flex flex-col gap-12 bg-[#0c151f] py-12 sm:py-20 md:gap-16 md:py-28 lg:gap-20 lg:py-36 xl:py-48 2xl:py-40">
+      <h2 className="flex flex-col px-8 font-noto text-3xl text-white sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
         Ecos del Arte
       </h2>
       <div className="embla">
@@ -143,15 +158,16 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <Link
-        href="/galeria"
-        className="mx-8 flex h-12 items-center justify-center gap-2 self-end rounded-full text-lg font-extrabold uppercase text-white"
-      >
-        Ver galería <ChevronsRight size={24} />
-      </Link>
+      <div className="flex justify-end px-8 sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
+        <Link
+          href="/galeria"
+          className="flex h-12 items-center justify-center gap-2 rounded-full text-lg font-extrabold uppercase text-white sm:text-xl md:text-2xl"
+        >
+          Ver galería <ChevronsRight size={getIconSize(isSm, isMd)} />
+        </Link>
+      </div>
     </section>
   );
 };
 
 export { Carousel };
-// "mx-6 flex h-12 items-center justify-center gap-2 self-end rounded-full bg-[#ecb67c] px-8 uppercase text-[#0c151f] font-extrabold";

@@ -1,9 +1,31 @@
 .embla {
-  max-width: 48rem;
   margin: auto;
   --slide-height: 480px;
   --slide-spacing: 1rem;
   --slide-size: 90%;
+
+  @media (min-width: 640px) {
+    --slide-height: 520px;
+  }
+
+  @media (min-width: 768px) {
+    --slide-height: 560px;
+  }
+
+  @media (min-width: 1024px) {
+    --slide-height: 600px;
+    --slide-size: 80%;
+  }
+
+  @media (min-width: 1280px) {
+    --slide-height: 640px;
+    --slide-size: 70%;
+  }
+
+  @media (min-width: 1536px) {
+    --slide-height: 680px;
+    --slide-size: 60%;
+  }
 }
 .embla__viewport {
   overflow: hidden;
