@@ -74,7 +74,7 @@ const Insight = () => {
         </div>
         <div className="flex basis-1/2 flex-col gap-8 md:gap-10">
           <motion.h2
-            className="flex flex-col font-noto text-3xl text-white md:mb-4 md:text-4xl"
+            className="flex flex-col font-noto text-3xl text-white md:mb-4 md:text-4xl xl:text-5xl"
             ref={titleRef}
             style={{ opacity: titleOpacity }}
           >

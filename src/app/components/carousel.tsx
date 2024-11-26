@@ -108,9 +108,10 @@ const Carousel = () => {
 
   return (
     <section className="flex flex-col gap-12 bg-[#0c151f] py-12 sm:py-20 md:gap-16 md:py-28 lg:gap-20 lg:py-36 xl:py-48 2xl:py-40">
-      <h2 className="flex flex-col px-8 font-noto text-3xl text-white sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
-        Ecos del Arte
-      </h2>
+      <div className="flex justify-center px-8 font-noto text-3xl text-white sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 xl:text-5xl 2xl:px-48">
+        <h2 className="w-full max-w-screen-2xl">Ecos del Arte</h2>
+      </div>
+
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
@@ -158,13 +159,16 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-end px-8 sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
-        <Link
-          href="/galeria"
-          className="flex h-12 items-center justify-center gap-2 rounded-full text-lg font-extrabold uppercase text-white sm:text-xl md:text-2xl"
-        >
-          Ver galería <ChevronsRight size={getIconSize(isSm, isMd)} />
-        </Link>
+
+      <div className="flex justify-center px-8 sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
+        <div className="flex w-full max-w-screen-2xl justify-end">
+          <Link
+            href="/galeria"
+            className="flex h-12 items-center justify-center gap-2 rounded-full text-lg font-extrabold uppercase text-white sm:text-xl md:text-2xl"
+          >
+            Ver galería <ChevronsRight size={getIconSize(isSm, isMd)} />
+          </Link>
+        </div>
       </div>
     </section>
   );

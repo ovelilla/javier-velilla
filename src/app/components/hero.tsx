@@ -20,11 +20,11 @@ const Hero = () => {
   // const opacityText2 = useTransform(scrollY, [0, 200], [1, 0]);
 
   return (
-    <section className="flex h-[calc(100vh-7rem)] flex-col bg-[#0e1822] sm:h-[calc(100dvh-8rem)] md:h-[calc(100dvh-9rem)]">
+    <section className="flex h-[calc(100vh-7rem)] flex-col bg-[#0e1822] sm:h-[calc(100dvh-8rem)] md:h-[calc(100dvh-9rem)] xl:h-[calc(100dvh-9rem+200px)]">
       <div className="md relative h-20 shrink-0 sm:h-24 md:h-28 lg:h-36 xl:h-44 2xl:h-52">
         <div className="absolute top-0 z-30 flex h-[calc(100vh-7rem)] w-full flex-col sm:h-[calc(100dvh-8rem)] md:h-[calc(100dvh-9rem)]">
           <div className="px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-28">
-            <h1 className="flex flex-col font-noto text-5xl uppercase leading-[1.2] text-white sm:text-6xl sm:leading-[1.2] md:text-7xl md:leading-[1.1] lg:text-8xl lg:leading-[1.1] xl:text-9xl xl:leading-[1] 2xl:text-[9rem] 2xl:leading-[1]">
+            <h1 className="flex flex-col font-noto text-5xl uppercase leading-[1.2] text-white sm:text-6xl sm:leading-[1.2] md:text-7xl md:leading-[1.1] lg:text-8xl lg:leading-[1.1] xl:text-9xl xl:leading-[1] 2xl:text-9xl 2xl:leading-[1]">
               <motion.span className="self-start" style={{ y: ySpan1 }}>
                 J. Javier
               </motion.span>
@@ -40,17 +40,17 @@ const Hero = () => {
             </h1>
           </div>
 
-          <div className="mt-auto overflow-hidden">
-            <div className="flex w-[90%] flex-col gap-4 p-8 pb-14 sm:p-12 md:p-16">
+          <div className="mt-auto flex justify-end overflow-hidden">
+            <div className="flex items-end w-[90%] flex-col gap-4 p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 2xl:p-28">
               <div
-                className="text-2xl uppercase text-white md:text-3xl xl:text-4xl 2xl:text-5xl"
+                className="text-2xl uppercase text-white md:text-3xl xl:text-4xl"
                 // style={{ x: xText1 }}
               >
                 NOVIEMBRE 28 - DICIEMBRE 29
               </div>
 
               <div
-                className="text-xl uppercase text-white md:text-2xl xl:text-3xl 2xl:text-4xl"
+                className="text-xl uppercase text-white md:text-2xl xl:text-3xl"
                 // style={{ x: xText2 }}
               >
                 <p>

@@ -34,7 +34,7 @@ const Gallery = () => {
         }
       });
     }
-  }, []);
+  }, [isSm, isMd]);
 
   return (
     <section className="flex flex-col gap-8 bg-[#0e1822] pb-12 sm:pb-20 md:gap-12 md:pb-28 lg:gap-16 lg:pb-36 xl:pb-48 2xl:pb-40">

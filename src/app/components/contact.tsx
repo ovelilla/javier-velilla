@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
 
         <div className="order-1 flex basis-1/2 flex-col gap-8 md:gap-12 lg:order-2">
-          <h2 className="flex flex-col font-noto text-3xl text-white md:text-4xl">
+          <h2 className="flex flex-col font-noto text-3xl text-white md:text-4xl xl:text-5xl">
             Contacto
           </h2>
 
