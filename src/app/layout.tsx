@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={akrobat.className}>
         <Header />
 
-        <main className="flex flex-col">{children}</main>
+        <main>{children}</main>
 
         <Footer />
       </body>

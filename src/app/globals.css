@@ -4,12 +4,8 @@
 
 html {
   min-height: 100dvh;
-  position: relative;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background-color: #121d29;
   min-height: 100dvh;
 }

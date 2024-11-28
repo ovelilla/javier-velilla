@@ -1,4 +1,5 @@
 import * as React from "react";
+import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -24,6 +25,10 @@ type MenuItemProps = {
   link: string;
 };
 
+const menoBannerLight = localFont({
+  src: "../fonts/meno-banner-light.woff2",
+});
+
 export const MenuItem = ({ title, link }: MenuItemProps) => {
   return (
     <motion.li
@@ -33,7 +38,7 @@ export const MenuItem = ({ title, link }: MenuItemProps) => {
     >
       <Link
         href={link}
-        className="flex h-12 font-noto text-2xl uppercase text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        className={`flex h-12 text-5xl uppercase text-[#bbcbdc] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl ${menoBannerLight.className}`}
       >
         {title}
       </Link>

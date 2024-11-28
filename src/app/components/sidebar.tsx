@@ -77,7 +77,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         >
           <motion.div
             animate="open"
-            className="absolute right-0 top-0 z-40 h-full w-72 bg-[#0e1822] sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem]"
+            className="absolute right-0 top-0 z-40 h-full w-full bg-[#0e1822] sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem]"
             exit="closed"
             initial="closed"
             custom={height}

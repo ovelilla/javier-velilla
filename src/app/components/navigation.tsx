@@ -4,7 +4,7 @@ import { MenuItem } from "./menu-item";
 
 const variants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.07, delayChildren: 0.3 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -35,8 +35,11 @@ const items = [
 ];
 
 export const Navigation = () => (
-  <nav className="mt-24 p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-20">
-    <motion.ul variants={variants} className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
+  <nav className="mt-24 p-6 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-20">
+    <motion.ul
+      variants={variants}
+      className="flex flex-col items-center gap-6 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
+    >
       {items.map((item) => (
         <MenuItem key={item.id} {...item} />
       ))}

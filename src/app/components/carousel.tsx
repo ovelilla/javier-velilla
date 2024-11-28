@@ -1,34 +1,39 @@
 "use client";
 
 // Vendors
+import localFont from "next/font/local";
 import { EmblaCarouselType, EmblaEventType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 // Styles
 import "./embla.css";
 // Hooks
-import { useMediaQuery } from "../hooks/useMediaQuery";
+// import { useMediaQuery } from "../hooks/useMediaQuery";
 
-import { ChevronsRight } from "lucide-react";
+// import { ChevronsRight } from "lucide-react";
+
+const menoBannerLightItalic = localFont({
+  src: "../fonts/meno-banner-light-italic.woff2",
+});
 
 const TWEEN_FACTOR_BASE = 0.2;
 
-const getIconSize = (isSm: boolean, isMd: boolean) => {
-  if (isSm && !isMd) {
-    return 28;
-  }
-  if (isSm && isMd) {
-    return 32;
-  }
-  return 24;
-};
+// const getIconSize = (isSm: boolean, isMd: boolean) => {
+//   if (isSm && !isMd) {
+//     return 28;
+//   }
+//   if (isSm && isMd) {
+//     return 32;
+//   }
+//   return 24;
+// };
 
 const Carousel = () => {
-  const isSm = useMediaQuery("(min-width: 640px)");
-  const isMd = useMediaQuery("(min-width: 768px)");
+  // const isSm = useMediaQuery("(min-width: 640px)");
+  // const isMd = useMediaQuery("(min-width: 768px)");
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -107,11 +112,7 @@ const Carousel = () => {
   }, [emblaApi, tweenParallax]);
 
   return (
-    <section className="flex flex-col gap-12 bg-[#0c151f] py-12 sm:py-20 md:gap-16 md:py-28 lg:gap-20 lg:py-36 xl:py-48 2xl:py-40">
-      <div className="flex justify-center px-8 font-noto text-3xl text-white sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 xl:text-5xl 2xl:px-48">
-        <h2 className="w-full max-w-screen-2xl">Ecos del Arte</h2>
-      </div>
-
+    <section className="relative flex flex-col gap-12 bg-[#0e1822] pb-32 sm:py-20 md:gap-16 md:py-28 lg:gap-20 lg:py-36 xl:py-48 2xl:py-40">
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
@@ -160,16 +161,15 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className="flex justify-center px-8 sm:px-12 md:px-16 md:text-4xl lg:px-24 xl:px-32 2xl:px-48">
-        <div className="flex w-full max-w-screen-2xl justify-end">
-          <Link
-            href="/galeria"
-            className="flex h-12 items-center justify-center gap-2 rounded-full text-lg font-extrabold uppercase text-white sm:text-xl md:text-2xl"
-          >
-            Ver galería <ChevronsRight size={getIconSize(isSm, isMd)} />
-          </Link>
-        </div>
+      <div className="mt-10 px-6">
+        <button
+          className={`h-12 w-full border border-[#bbcbdc] px-4 text-xl text-[#bbcbdc] ${menoBannerLightItalic.className}`}
+        >
+          Ver pinturas
+        </button>
       </div>
+
+      <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#aa580d] opacity-20" />
     </section>
   );
 };
