@@ -8,6 +8,8 @@ import Image from "next/image";
 // import Link from "next/link";
 import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { OutlineButton } from "./outline-button";
+
 // Styles
 import "./embla.css";
 // Hooks
@@ -15,9 +17,9 @@ import "./embla.css";
 
 // import { ChevronsRight } from "lucide-react";
 
-const menoBannerLightItalic = localFont({
-  src: "../fonts/meno-banner-light-italic.woff2",
-});
+// const menoBannerLightItalic = localFont({
+//   src: "../fonts/meno-banner-light-italic.woff2",
+// });
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -161,13 +163,11 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-6">
-        <button
-          className={`h-12 w-full border border-[#bbcbdc] px-4 text-xl text-[#bbcbdc] ${menoBannerLightItalic.className}`}
-        >
-          Ver pinturas
-        </button>
-      </div>
+      <OutlineButton
+        className="self-center"
+        color="primary"
+        text="Ver todas las pinturas"
+      />
 
       <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#aa580d] opacity-20" />
     </section>

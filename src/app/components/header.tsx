@@ -89,12 +89,12 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed left-0 top-0 z-10 flex h-20 w-full overflow-hidden xl:h-32"
+      className="fixed left-0 top-0 z-40 flex h-20 w-full overflow-hidden xl:h-24 2xl:h-28"
       style={{ backgroundColor }}
     >
-      <div className="relativ flex flex-1 items-center justify-between px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-28">
+      <div className="relativ flex flex-1 items-center justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-40">
         <MotionLink
-          className={`flex text-center text-2xl uppercase text-[#bbcbdc] ${menoBannerCondensedLight.className}`}
+          className={`flex text-center text-2xl uppercase text-[#bbcbdc] xl:text-3xl ${menoBannerCondensedLight.className}`}
           style={{ opacity }}
           href="/"
         >
