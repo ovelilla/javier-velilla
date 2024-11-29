@@ -1,7 +1,7 @@
 "use client";
 
 // Vendors
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { EmblaCarouselType, EmblaEventType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
