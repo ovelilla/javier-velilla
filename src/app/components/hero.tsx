@@ -30,8 +30,6 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#bbcbdc] opacity-20" />
-
       <div className="xl:px-24 2xl:px-40">
         <div className="relative pt-[160%] sm:pt-[100%] md:pt-[80%] lg:pt-[60%] xl:pt-[50%] 2xl:pt-[40%]">
           <div className="absolute bottom-0 left-0 top-0 z-10 w-full xl:-bottom-40 2xl:-bottom-64">

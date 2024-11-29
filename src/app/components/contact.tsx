@@ -9,17 +9,13 @@ const menoBannerCondensedLight = localFont({
 const menoBannerLight = localFont({
   src: "../fonts/meno-banner-light.woff2",
 });
-// const menoBannerLightItalic = localFont({
-//   src: "../fonts/meno-banner-light-italic.woff2",
-// });
 
 const Contact = () => {
   return (
     <section
-      className="flex flex-col gap-12 bg-[#f5efe0] px-6 py-32 sm:px-8 sm:py-20 md:gap-16 md:px-12 md:py-28 md:text-4xl lg:flex-row lg:gap-20 lg:px-16 lg:py-36 xl:px-24 xl:py-48 2xl:gap-48 2xl:px-40 2xl:py-40"
+      className="relative flex flex-col gap-12 bg-[#f5efe0] px-6 py-32 sm:px-8 md:gap-16 md:px-12 md:text-4xl lg:flex-row lg:gap-20 lg:px-16 lg:py-36 xl:px-24 xl:py-48 2xl:gap-48 2xl:px-40 2xl:py-52"
       id="contacto"
     >
-      {/* <div className="flex w-full max-w-screen-2xl flex-col gap-12 md:gap-16 lg:flex-row lg:gap-20 xl:gap-36 2xl:gap-48"> */}
       <div className="order-2 basis-1/2 lg:order-1">
         <div className="relative aspect-[4/3]">
           <Image
@@ -106,7 +102,6 @@ const Contact = () => {
           />
         </form>
       </div>
-      {/* </div> */}
     </section>
   );
 };

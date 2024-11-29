@@ -24,13 +24,18 @@ const items = [
   },
   {
     id: 2,
-    title: "Galería",
-    link: "/galeria",
+    title: "Pinturas",
+    link: "/pinturas",
   },
   {
     id: 3,
+    title: "Retratos",
+    link: "/retratos",
+  },
+  {
+    id: 4,
     title: "Contacto",
-    link: "/#contacto",
+    link: "/contacto",
   },
 ];
 

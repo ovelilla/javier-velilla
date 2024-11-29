@@ -91,8 +91,6 @@ const Discover = () => {
           text="Ver todos los retratos"
         />
       </div>
-
-      <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#aa580d] opacity-20" />
     </section>
   );
 };

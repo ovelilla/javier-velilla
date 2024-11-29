@@ -1,0 +1,10 @@
+@import "./lightgallery.css";
+@import "./lg-zoom.css";
+
+.gallery {
+  margin: 0 auto;
+}
+
+.gallery__item img {
+  width: 100%;
+}

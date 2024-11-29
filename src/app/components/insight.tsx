@@ -16,7 +16,7 @@ const menoBannerLight = localFont({
 
 const Insight = () => {
   return (
-    <section className="relative flex flex-col gap-6 bg-[#0e1822] px-6 py-32 sm:px-8 md:px-10 lg:px-16 xl:px-24 2xl:px-40">
+    <section className="relative flex flex-col gap-6 bg-[#0e1822] px-6 pt-32 sm:px-8 md:px-10 lg:px-16 lg:pt-36 xl:px-24 xl:pt-48 2xl:px-40 2xl:pt-52">
       <h2
         className={`flex flex-col text-center text-6xl uppercase text-[#bbcbdc] lg:text-left 2xl:text-8xl ${menoBannerCondensedLight.className}`}
       >
@@ -37,9 +37,9 @@ const Insight = () => {
           </div>
         </div>
 
-        <div className="flex basis-1/2 flex-col items-center gap-16 px-4 xl:gap-24">
+        <div className="flex basis-1/2 flex-col items-center gap-16 px-4 2xl:gap-24">
           <blockquote
-            className={`text-center text-2xl text-[#bbcbdc] md:text-xl lg:order-2 lg:max-w-3xl xl:text-3xl ${menoBannerLight.className}`}
+            className={`text-center text-2xl text-[#bbcbdc] lg:order-2 lg:max-w-3xl 2xl:text-3xl ${menoBannerLight.className}`}
           >
             &quot;Hay narraciones secretas e íntimas en la pintura de Javier
             Velilla. Sus cuadros están habitados por el eco de la búsqueda de
@@ -74,8 +74,6 @@ const Insight = () => {
           <OutlineButton className="order-2" color="primary" text="Biografía" />
         </div>
       </div>
-
-      <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#bbcbdc] opacity-20" />
     </section>
   );
 };

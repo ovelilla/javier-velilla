@@ -22,10 +22,19 @@ const Footer = () => {
     setContainerRendered(true);
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/archivos/portfolio.pdf";
+    link.download = "portfolio.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     containerRendered && (
-      <footer className="relative flex lg:h-screen flex-col bg-[#0e1822] lg:flex-row">
-        <div className="flex shrink-0 flex-col items-center px-8 py-32 sm:px-12 md:px-16 lg:basis-1/2 lg:px-24 xl:px-32 2xl:px-40">
+      <footer className="relative flex flex-col bg-[#0e1822] lg:h-screen lg:flex-row">
+        <div className="flex shrink-0 flex-col items-center px-8 py-32 sm:px-12 md:px-16 lg:basis-1/2 lg:px-24 lg:py-36 xl:px-32 xl:py-48 2xl:px-40 2xl:py-52">
           <div className="flex flex-col items-center">
             <div
               className={`${menoBannerCondensedLight.className} text-center text-4xl uppercase text-white xl:text-5xl 2xl:text-6xl`}
@@ -45,8 +54,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-16 lg:mt-auto flex">
-            <button className="relative flex h-32 w-32 flex-col items-center justify-center rounded-full bg-[#f0bb81] text-xl uppercase text-[#0e1822] transition-colors hover:text-white lg:h-60 lg:w-60 lg:gap-2 lg:text-3xl">
+          <div className="mt-16 flex lg:mt-auto">
+            <button
+              onClick={handleDownload}
+              className="relative flex h-32 w-32 flex-col items-center justify-center rounded-full bg-[#f0bb81] text-xl uppercase text-[#0e1822] transition-colors hover:text-white lg:h-60 lg:w-60 lg:gap-2 lg:text-3xl"
+            >
               <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-[#f0bb81] lg:h-64 lg:w-64"></div>
               <span>Descargar</span>
               <span>Portfolio</span>
