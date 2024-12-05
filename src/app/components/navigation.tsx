@@ -19,7 +19,7 @@ const items = [
   },
   {
     id: 1,
-    title: "Biografía",
+    title: "El Pintor",
     link: "/biografia",
   },
   {

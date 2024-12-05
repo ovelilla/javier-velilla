@@ -1,23 +1,34 @@
 "use client";
 
 import { useEffect } from "react";
-
-import "./css/style.css";
 import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
-
+// Components
 import { Item } from "./components/item";
-
-import { IMAGES } from "./constants/gallery.constants";
-
+import { Section } from "@/components/section";
+import { Title } from "@/components/title";
+// Constants
+import { IMAGES } from "./constants/paintings.constants";
 // Hooks
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+// Styles
+import "./css/style.css";
 
 const Paintings = () => {
-  const isSm = useMediaQuery("(min-width: 640px)");
-  const isMd = useMediaQuery("(min-width: 768px)");
+  const isSm = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
+  const isMd = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
+  const isLg = useMediaQuery("(min-width: 1024px) and (max-width: 1279px)");
+  const isXl = useMediaQuery("(min-width: 1280px)");
 
   useEffect(() => {
+    const getRowHeight = () => {
+      if (isSm) return 240;
+      if (isMd) return 280;
+      if (isLg) return 320;
+      if (isXl) return 360;
+      return 200;
+    };
+
     if (typeof window !== "undefined") {
       import("flickr-justified-gallery").then((module) => {
         const fjGallery = module.default;
@@ -25,7 +36,7 @@ const Paintings = () => {
         if (gallery.length > 0) {
           fjGallery(gallery, {
             itemSelector: ".gallery__item",
-            rowHeight: isSm && !isMd ? 240 : isSm && isMd ? 280 : 180,
+            rowHeight: getRowHeight(),
             lastRow: "start",
             gutter: 16,
             rowHeightTolerance: 0.1,
@@ -34,13 +45,11 @@ const Paintings = () => {
         }
       });
     }
-  }, [isSm, isMd]);
+  }, [isSm, isMd, isLg, isXl]);
 
   return (
-    <section className="flex flex-col gap-8 bg-[#0e1822] py-12 sm:py-20 md:gap-12 md:py-28 lg:gap-16 lg:py-36 xl:py-48 2xl:py-40">
-      <h2 className="flex flex-col px-8 font-noto text-3xl text-white sm:px-12 sm:text-4xl md:px-16 md:text-5xl lg:px-24 lg:text-6xl xl:px-32 xl:text-7xl 2xl:px-48 2xl:text-8xl">
-        Galería
-      </h2>
+    <Section>
+      <Title>Pinturas</Title>
 
       <div>
         <LightGallery
@@ -63,7 +72,7 @@ const Paintings = () => {
           ))}
         </LightGallery>
       </div>
-    </section>
+    </Section>
   );
 };
 

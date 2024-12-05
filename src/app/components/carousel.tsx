@@ -6,7 +6,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { OutlineButton } from "./outline-button";
+import { Button } from "../../components/button";
 // Styles
 import "./embla.css";
 
@@ -139,13 +139,9 @@ const Carousel = () => {
         </div>
       </div>
 
-      <OutlineButton
-        className="self-center"
-        color="primary"
-        text="Ver todas las pinturas"
-      />
-
-      <div className="absolute left-1/2 top-0 h-full w-[1px] -translate-x-1/2 transform bg-[#aa580d] opacity-20" />
+      <Button className="self-center" color="primary">
+        Ver todas las pinturas
+      </Button>
     </section>
   );
 };

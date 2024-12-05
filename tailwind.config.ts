@@ -6,6 +6,16 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "border-[#bbcbdc]",
+    "border-[#aa580d]",
+    "text-[#bbcbdc]",
+    "text-[#aa580d]",
+    "placeholder:text-[#bbcbdc]",
+    "placeholder:text-[#aa580d]",
+    "focus:ring-[#bbcbdc]",
+    "focus:ring-[#aa580d]",
+  ],
   theme: {
     fontFamily: {
       noto: ["'Noto Serif Display Variable'", "serif"],

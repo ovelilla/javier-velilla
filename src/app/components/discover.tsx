@@ -1,39 +1,43 @@
 "use client";
 
 // Vendors
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import Image from "next/image";
-import localFont from "next/font/local";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 // Components
-import { Painting } from "./painting";
-import { OutlineButton } from "./outline-button";
-
-const menoBannerCondensedLight = localFont({
-  src: "../fonts/meno-banner-condensed-light.woff2",
-});
-
-// const menoBannerLight = localFont({
-//   src: "../fonts/meno-banner-light.woff2",
-// });
-
-// const menoBannerLightItalic = localFont({
-//   src: "../fonts/meno-banner-light-italic.woff2",
-// });
+import { Painting } from "@/components/painting";
+import { Button } from "@/components/button";
+import { Title } from "@/components/title";
 
 const Discover = () => {
-  // const { scrollY } = useScroll();
+  const title1Ref = useRef(null);
+  const title2Ref = useRef(null);
 
-  // const ySpan1 = useTransform(scrollY, [0, 800], [0, -200]);
-  // const ySpan2 = useTransform(scrollY, [0, 800], [0, 200]);
+  const { scrollYProgress: title1eScrollProgress } = useScroll({
+    target: title1Ref,
+    offset: ["end end", "center center"],
+  });
+
+  const { scrollYProgress: title2eScrollProgress } = useScroll({
+    target: title2Ref,
+    offset: ["end end", "center center"],
+  });
+
+  const title1Y = useTransform(title1eScrollProgress, [0, 1], [100, 0]);
+  const title2Y = useTransform(title2eScrollProgress, [0, 1], [100, 0]);
+
+  const MotionTitle = motion.create(Title);
 
   return (
     <section className="relative flex flex-col gap-32 bg-[#f5efe0] px-6 py-32 sm:px-8 md:px-12 lg:px-16 xl:px-24 xl:pt-80 2xl:px-40 2xl:pt-[420px]">
       <div className="flex flex-col">
-        <h2
-          className={`flex flex-col text-6xl uppercase text-[#aa580d] 2xl:text-8xl ${menoBannerCondensedLight.className}`}
+        <MotionTitle
+          tag="h2"
+          textColor="secondary"
+          ref={title1Ref}
+          style={{ y: title1Y }}
         >
           Pinturas
-        </h2>
+        </MotionTitle>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(288px,1fr))] gap-20 2xl:gap-48">
           <Painting
@@ -45,27 +49,32 @@ const Discover = () => {
           />
 
           <Painting
-            alt="El Pilar, Zaragoza"
+            alt="El Retiro, Madrid"
             aspectRatio="aspect-[4/3]"
             captionDescription="100 x 100 cm - Acrílico sobre lienzo"
-            captionTitle="El Pilar, Zaragoza"
-            src="/galeria/imagen-024.jpg"
+            captionTitle="El Retiro, Madrid"
+            src="/galeria/imagen-102.jpg"
           />
         </div>
 
-        <OutlineButton
+        <Button
+          href="/pituras"
           className="mt-16 self-end md:mt-20 lg:mt-24 xl:mt-32"
           color="secondary"
-          text="Ver todas las pinturas"
-        />
+        >
+          Descubre más pinturas
+        </Button>
       </div>
 
       <div className="flex flex-col">
-        <h2
-          className={`flex flex-col text-6xl uppercase text-[#aa580d] 2xl:text-8xl ${menoBannerCondensedLight.className}`}
+        <MotionTitle
+          tag="h2"
+          textColor="secondary"
+          ref={title2Ref}
+          style={{ y: title2Y }}
         >
           Retratos
-        </h2>
+        </MotionTitle>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(288px,1fr))] gap-20 2xl:gap-48">
           <Painting
@@ -73,7 +82,7 @@ const Discover = () => {
             aspectRatio="aspect-[4/3]"
             captionDescription="100 x 100 cm - Acrílico sobre lienzo"
             captionTitle="Pascal"
-            src="/retratos/retrato-002.jpg"
+            src="/retratos/retrato-003.jpg"
           />
 
           <Painting
@@ -81,15 +90,17 @@ const Discover = () => {
             aspectRatio="aspect-[4/3]"
             captionDescription="100 x 100 cm - Acrílico sobre lienzo"
             captionTitle="Oscar"
-            src="/retratos/retrato-003.jpg"
+            src="/retratos/retrato-002.jpg"
           />
         </div>
 
-        <OutlineButton
+        <Button
+          href="/retratos"
           className="mt-16 self-start md:mt-20 lg:mt-24 xl:mt-32"
           color="secondary"
-          text="Ver todos los retratos"
-        />
+        >
+          Descubre más retratos
+        </Button>
       </div>
     </section>
   );

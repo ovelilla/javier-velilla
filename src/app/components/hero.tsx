@@ -3,11 +3,8 @@
 // Vendors
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import localFont from "next/font/local";
-
-const menoBannerCondensedLight = localFont({
-  src: "../fonts/meno-banner-condensed-light.woff2",
-});
+// Components
+import { Title } from "@/components/title";
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -18,16 +15,14 @@ const Hero = () => {
   return (
     <section className="relative bg-[#0e1822]">
       <div className="flex h-72 items-end justify-center overflow-hidden py-6 sm:h-[312px] md:h-[336px] lg:h-[360px] xl:h-[408px] 2xl:h-[456px]">
-        <h1
-          className={`flex flex-col text-center text-7xl uppercase text-[#bbcbdc] sm:text-[88px] md:text-[104px] lg:text-[112px] xl:text-[128px] 2xl:text-[152px] ${menoBannerCondensedLight.className}`}
-        >
-          <motion.span className="" style={{ x: ySpan1 }}>
+        <Title className="flex flex-col text-center">
+          <motion.span className="leading-none" style={{ x: ySpan1 }}>
             J. Javier
           </motion.span>
-          <motion.span className="" style={{ x: ySpan2 }}>
+          <motion.span className="leading-none" style={{ x: ySpan2 }}>
             Velilla
           </motion.span>
-        </h1>
+        </Title>
       </div>
 
       <div className="xl:px-24 2xl:px-40">
@@ -39,6 +34,7 @@ const Hero = () => {
               style={{ objectFit: "cover" }}
               priority
               src="/galeria/imagen-017.jpg"
+              sizes="100vw"
             />
           </div>
         </div>
