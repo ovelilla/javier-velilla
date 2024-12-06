@@ -14,7 +14,7 @@ async function send(formData: FormDataType) {
       subject: "Contacto desde el sitio web",
       html: `${formData.message}`,
     });
-    console.log(data);
+    // console.log(data);
     return true;
   } catch (error) {
     console.error(error);

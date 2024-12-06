@@ -34,7 +34,7 @@ const Input = ({
 }: InputProps) => {
   return (
     <input
-      className={`flex h-12 items-center border-b ${error ? `border-red-800` : `border-[${colors[color]}]`} bg-transparent px-4 text-xl text-[${colors[color]}] placeholder:text-[${colors[color]}] focus:border-0 focus:outline-none focus:ring-1 ${error ? `focus:ring-red-800` : `focus:ring-[${colors[color]}]`} md:text-2xl xl:h-16 xl:text-3xl ${menoBannerCondensedLight.className} ${className}`}
+      className={`flex h-12 items-center border-b ${error ? `border-red-800` : `border-[${colors[color]}]`} bg-transparent px-4 text-2xl text-[${colors[color]}] placeholder:text-[${colors[color]}] focus:border-0 focus:outline-none focus:ring-1 ${error ? `focus:ring-red-800` : `focus:ring-[${colors[color]}]`} lg:h-16 lg:text-3xl 2xl:h-20 2xl:text-4xl ${menoBannerCondensedLight.className} ${className}`}
       id={id}
       name={name}
       onChange={onChange}
