@@ -104,6 +104,7 @@ const Header = () => {
         <button
           className="z-50 flex h-[88px] items-center gap-4 rounded-full md:gap-6"
           onClick={handleClick}
+          aria-label="Abrir menú"
         >
           <div className="flex w-8 flex-col gap-2 sm:w-10 md:w-12 md:gap-3">
             <motion.span

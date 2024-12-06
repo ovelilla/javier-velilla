@@ -74,12 +74,14 @@ const Footer = () => {
                 <a
                   href="https://instagram.com/javier.velilla"
                   className="flex h-10 w-10 items-center justify-center"
+                  aria-label="Instagram"
                 >
                   <SiInstagram size={isSm ? (isMd ? 32 : 28) : 24} />
                 </a>
                 <a
                   href="https://facebook.com/javier.velilla"
                   className="flex h-10 w-10 items-center justify-center"
+                  aria-label="Facebook"
                 >
                   <SiFacebook size={isSm ? (isMd ? 32 : 28) : 24} />
                 </a>
