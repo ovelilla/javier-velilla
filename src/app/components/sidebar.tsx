@@ -6,6 +6,8 @@ import { Dispatch, SetStateAction } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 // Components
 import { Navigation } from "./navigation";
+// Hooks
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const overlayVariants = {
   open: {
@@ -24,23 +26,25 @@ const overlayVariants = {
   },
 };
 
-const sidebar = {
-  open: (height: number) => ({
-    clipPath: `circle(${height * 2 + 200}px at calc(100% - 48px) 56px)`,
-    transition: {
-      type: "spring",
-      stiffness: 15,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: "circle(32px at calc(100% - 48px) 56px)",
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-    },
-  },
+const getY = ({
+  isSm,
+  isMd,
+  isLg,
+  isXl,
+  is2Xl,
+}: {
+  isSm: boolean;
+  isMd: boolean;
+  isLg: boolean;
+  isXl: boolean;
+  is2Xl: boolean;
+}) => {
+  if (isSm) return "calc(100% - 48px)";
+  if (isMd) return "calc(100% - 64px)";
+  if (isLg) return "calc(100% - 96px)";
+  if (isXl) return "calc(100% - 128px)";
+  if (is2Xl) return "calc(100% - 160px)";
+  return "calc(100% - 24px)";
 };
 
 type SidebarProps = {
@@ -51,6 +55,43 @@ type SidebarProps = {
 const Sidebar = ({ open, setOpen }: SidebarProps) => {
   const [height, setHeight] = useState<number>(1000);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const isSm = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
+  const isMd = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
+  const isLg = useMediaQuery("(min-width: 1024px) and (max-width: 1279px)");
+  const isXl = useMediaQuery("(min-width: 1280px) and (max-width: 1535px)");
+  const is2Xl = useMediaQuery("(min-width: 1536px)");
+
+  const sidebar = {
+    open: (height: number) => ({
+      clipPath: `circle(${height * 2 + 200}px at ${getY({
+        isSm,
+        isMd,
+        isLg,
+        isXl,
+        is2Xl,
+      })} 56px)`,
+      transition: {
+        type: "spring",
+        stiffness: 15,
+        restDelta: 2,
+      },
+    }),
+    closed: {
+      clipPath: `circle(32px at  ${getY({
+        isSm,
+        isMd,
+        isLg,
+        isXl,
+        is2Xl,
+      })} 56px)`,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      },
+    },
+  };
 
   const handleClick = () => {
     setOpen(false);

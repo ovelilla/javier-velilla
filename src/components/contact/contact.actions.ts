@@ -10,7 +10,7 @@ async function send(formData: FormDataType) {
   try {
     const { data } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: ["delivered@resend.dev"],
+      to: ["o.velillaa@gmail.com"],
       subject: "Contacto desde el sitio web",
       html: `${formData.message}`,
     });

@@ -97,7 +97,7 @@ const Biography = () => {
           Currículum
         </Title>
 
-        <div className="flex flex-col gap-8 lg:gap-12">
+        <div className="flex flex-col gap-8 lg:gap-12 2xl:gap-16">
           {MILESTONES.map((milestone, index) => (
             <Row key={index} {...milestone} />
           ))}

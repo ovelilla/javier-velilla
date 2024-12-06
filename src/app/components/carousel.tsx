@@ -101,8 +101,8 @@ const Carousel = () => {
                     width={500}
                     height={500}
                     className="embla__slide__img embla__parallax__img"
-                    src="/san-simeon-siria.jpg"
-                    alt="Retiro"
+                    src="/galeria/imagen-019.jpg"
+                    alt="Imagen 19"
                   />
                 </div>
               </div>
@@ -115,8 +115,8 @@ const Carousel = () => {
                     width={500}
                     height={500}
                     className="embla__slide__img embla__parallax__img"
-                    src="/villa-borguese.jpg"
-                    alt="Retiro"
+                    src="/galeria/imagen-043.jpg"
+                    alt="Imagen 43"
                   />
                 </div>
               </div>
@@ -129,8 +129,8 @@ const Carousel = () => {
                     width={500}
                     height={500}
                     className="embla__slide__img embla__parallax__img"
-                    src="/monumento-leones-parque-retiro-javier-velilla.jpg"
-                    alt="Retiro"
+                    src="/galeria/imagen-024.jpg"
+                    alt="Imagen 24"
                   />
                 </div>
               </div>
