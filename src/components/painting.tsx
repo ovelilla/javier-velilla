@@ -43,7 +43,6 @@ const Painting = ({
           alt={alt}
           fill
           style={{ objectFit: "cover" }}
-          priority
           src={src}
           className="z-10"
           loading="lazy"
