@@ -74,7 +74,11 @@ const Insight = () => {
           </div>
         </div>
 
-        <Button className="lg:mt-16 lg:self-center" color="primary">
+        <Button
+          className="lg:mt-16 lg:self-center"
+          color="primary"
+          href="/biografia"
+        >
           Conoce al Pintor
         </Button>
       </Container>
