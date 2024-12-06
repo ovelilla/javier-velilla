@@ -11,6 +11,7 @@ async function send(formData: FormDataType) {
     await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: ["o.velillaa@gmail.com"],
+      replyTo: formData.email,
       subject: "Contacto desde el sitio web",
       html: `${formData.message}`,
     });
