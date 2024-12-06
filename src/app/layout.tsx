@@ -14,8 +14,9 @@ const akrobat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Javier Velilla Web Oficial",
-  description: "Javier Velilla's personal website",
+  title: "Javier Velilla - Pintor de Cuadros en Madrid | Arte y Retratos",
+  description:
+    "Descubre las pinturas y retratos de Javier Velilla, pintor en Madrid. Arte único que captura la belleza y la emoción en cada pincelada. Visita la galería.",
 };
 
 export default function RootLayout({

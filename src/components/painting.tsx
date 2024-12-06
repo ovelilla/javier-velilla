@@ -46,6 +46,7 @@ const Painting = ({
           priority
           src={src}
           className="z-10"
+          loading="lazy"
         />
       </div>
 
