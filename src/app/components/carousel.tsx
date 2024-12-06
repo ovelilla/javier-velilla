@@ -139,7 +139,7 @@ const Carousel = () => {
         </div>
       </div>
 
-      <Button className="self-center" color="primary">
+      <Button className="self-center" color="primary" href="/galeria">
         Ver todas las pinturas
       </Button>
     </section>
