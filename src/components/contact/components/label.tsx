@@ -25,7 +25,7 @@ const Label = ({
 }: LabelProps) => {
   return (
     <label
-      className={`text-4xl xl:text-5xl ${menoBannerCondensedLight.className} text-[${colors[color]}] ${className}`}
+      className={`text-3xl lg:text-4xl 2xl:text-5xl ${menoBannerCondensedLight.className} text-[${colors[color]}] ${className}`}
       htmlFor={htmlFor}
     >
       {children}
