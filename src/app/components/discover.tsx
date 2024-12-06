@@ -58,7 +58,7 @@ const Discover = () => {
         </div>
 
         <Button
-          href="/pituras"
+          href="/pinturas"
           className="mt-16 self-end md:mt-20 lg:mt-24 xl:mt-32"
           color="secondary"
         >
