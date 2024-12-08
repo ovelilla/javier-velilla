@@ -1,5 +1,16 @@
+// Vendors
+import { Dispatch, SetStateAction } from "react";
+
 type ContactComponentPropsType = {
   color?: "primary" | "secondary";
+};
+
+type ContatHandlersPropsType = {
+  formData: FormDataType;
+  setFormData: Dispatch<SetStateAction<FormDataType>>;
+  setFormErrors: Dispatch<SetStateAction<FormErrorsType>>;
+  setMessage: Dispatch<SetStateAction<string>>;
+  setLoading: Dispatch<SetStateAction<boolean>>;
 };
 
 type FormDataType = {
@@ -14,4 +25,9 @@ type FormErrorsType = {
   message?: string;
 };
 
-export type { ContactComponentPropsType, FormDataType, FormErrorsType };
+export type {
+  ContactComponentPropsType,
+  ContatHandlersPropsType,
+  FormDataType,
+  FormErrorsType,
+};

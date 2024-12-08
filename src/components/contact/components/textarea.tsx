@@ -13,6 +13,7 @@ const colors = {
 type TextareaProps = {
   className?: string;
   color?: keyof typeof colors;
+  disabled?: boolean;
   error?: string;
   id?: string;
   name?: string;
@@ -24,6 +25,7 @@ type TextareaProps = {
 const Textarea = ({
   className = "",
   color = "primary",
+  disabled = false,
   error,
   id,
   name,
@@ -35,6 +37,7 @@ const Textarea = ({
   return (
     <textarea
       className={`flex items-center border-b ${error ? `border-red-800` : `border-[${colors[color]}]`} bg-transparent p-4 text-xl text-[${colors[color]}] placeholder:text-[${colors[color]}] focus:border-0 focus:outline-none focus:ring-1 ${error ? `focus:ring-red-800` : `focus:ring-[${colors[color]}]`} md:text-2xl xl:text-3xl ${menoBannerCondensedLight.className} ${className}`}
+      disabled={disabled}
       id={id}
       name={name}
       onChange={onChange}
