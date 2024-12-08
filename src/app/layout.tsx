@@ -1,6 +1,7 @@
 // Vendors
 import localFont from "next/font/local";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 // Components
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
@@ -28,10 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={akrobat.className}>
         <Header />
-
         <main>{children}</main>
-
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
