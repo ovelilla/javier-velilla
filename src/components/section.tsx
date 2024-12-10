@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 const backgroundColors = {
   primary: "#0e1822",
   secondary: "#aa580d",
