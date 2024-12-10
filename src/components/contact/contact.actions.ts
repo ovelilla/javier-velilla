@@ -4,16 +4,19 @@
 import { Resend } from "resend";
 // Types
 import { FormDataType } from "./contact.types";
+// Templates
+import { ContactTemplate } from "./contact.template";
 
 async function send(formData: FormDataType) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Contacto desde el sitio web <onboarding@resend.dev>",
+      // to: ["javier.velilla47@gmail.com", "o.velillaa@gmail.com"],
       to: ["o.velillaa@gmail.com"],
       replyTo: formData.email,
       subject: "Contacto desde el sitio web",
-      html: `${formData.message}`,
+      react: ContactTemplate(formData),
     });
     return true;
   } catch (error) {

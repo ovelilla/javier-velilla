@@ -10,7 +10,7 @@ import { Textarea } from "@/components/contact/components/textarea";
 // Hooks
 import { ContatHook } from "./contact.hook";
 // Icons
-import { LuLoader2 } from "react-icons/lu";
+import { LuLoaderCircle } from "react-icons/lu";
 // Types
 import { ContactComponentPropsType } from "./contact.types";
 
@@ -80,7 +80,7 @@ const ContactComponent = ({ color = "primary" }: ContactComponentPropsType) => {
         disabled={loading}
         type="submit"
       >
-        {loading ? <LuLoader2 className="animate-spin" /> : "Enviar"}
+        {loading ? <LuLoaderCircle className="animate-spin" /> : "Enviar"}
       </Button>
 
       <Message color={color} message={message} />

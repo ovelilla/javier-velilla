@@ -5,8 +5,6 @@ import { Analytics } from "@vercel/analytics/react";
 // Components
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
-// Fonts
-import "@fontsource-variable/noto-serif-display";
 // Styles
 import "./globals.css";
 

@@ -24,9 +24,9 @@ const Biography = () => {
   const ySpan2 = useTransform(scrollY, [0, 800], [0, 200]);
 
   return (
-    <section className="relative bg-[#f5efe0]">
+    <section className="relative bg-[#0e1822]">
       <div className="flex h-72 items-end justify-center overflow-hidden py-6 sm:h-[312px] md:h-[336px] lg:h-[360px] xl:h-[408px] 2xl:h-[456px]">
-        <Title className="flex flex-col text-center" textColor="secondary">
+        <Title className="flex flex-col text-center">
           <motion.span className="leading-none" style={{ x: ySpan1 }}>
             El
           </motion.span>
@@ -51,27 +51,8 @@ const Biography = () => {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-32 px-6 py-16 sm:px-8 md:px-12 lg:px-16 lg:py-24 xl:px-24 xl:py-72 2xl:px-40 2xl:pt-[420px]">
+      <div className="relative flex flex-col gap-32 bg-[#f5efe0] px-6 py-16 sm:px-8 md:px-12 lg:px-16 lg:py-24 xl:px-24 xl:py-72 2xl:px-40 2xl:pt-[420px]">
         <div className="flex basis-[60%] flex-col items-center gap-12 lg:gap-16 2xl:gap-20">
-          <blockquote
-            className={`text-center text-2xl text-[#aa580d] lg:max-w-2xl 2xl:text-3xl ${menoBannerLight.className}`}
-          >
-            &quot;Hay narraciones secretas e íntimas en la pintura de Javier
-            Velilla. Sus cuadros están habitados por el eco de la búsqueda de
-            algún horizonte irrepetible, y poseen la certeza que imprime esa
-            soledad del viajero que se rinde a la belleza y rescata para otro
-            esa ciudad inmortal, ese equilibrio de color, esa emoción que no se
-            cuenta y solo puede percibirse. Sus pinturas poseen una buena dosis
-            de generosidad disimulada. Apropiarse de la belleza, recordarla
-            incorrupta para finalmente plasmarla en un lienzo no es un acto
-            gratuito para el alma. El aislamiento y la disciplina de su pulso,
-            me obligan a pensar en el tiempo, en ese que él detiene para
-            devolvernos el único horizonte, el momento mágico de esa luz
-            imposible, la levedad de un aire que se convierte en un sutil fondo
-            para entender el realismo de quien habla al otro lado de la
-            mirada.&quot;
-          </blockquote>
-
           <div className="flex flex-col gap-2">
             <h3
               className={`flex flex-col text-center text-5xl uppercase text-[#aa580d] md:text-4xl xl:text-6xl ${menoBannerCondensedLight.className}`}
@@ -85,10 +66,34 @@ const Biography = () => {
               Por Elena Moreno
             </cite>
           </div>
+
+          <blockquote
+            className={`flex flex-col gap-4 text-center text-2xl text-[#aa580d] lg:max-w-2xl lg:gap-6 2xl:gap-8 2xl:text-3xl ${menoBannerLight.className}`}
+          >
+            <p>
+              &quot;Hay narraciones secretas e íntimas en la pintura de Javier
+              Velilla. Sus cuadros están habitados por el eco de la búsqueda de
+              algún horizonte irrepetible, y poseen la certeza que imprime esa
+              soledad del viajero que se rinde a la belleza y rescata para otro
+              esa ciudad inmortal, ese equilibrio de color, esa emoción que no
+              se cuenta y solo puede percibirse. Sus pinturas poseen una buena
+              dosis de generosidad disimulada.&quot;
+            </p>
+            <p>
+              &quot;Apropiarse de la belleza, recordarla incorrupta para
+              finalmente plasmarla en un lienzo no es un acto gratuito para el
+              alma. El aislamiento y la disciplina de su pulso, me obligan a
+              pensar en el tiempo, en ese que él detiene para devolvernos el
+              único horizonte, el momento mágico de esa luz imposible, la
+              levedad de un aire que se convierte en un sutil fondo para
+              entender el realismo de quien habla al otro lado de la
+              mirada.&quot;
+            </p>
+          </blockquote>
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 px-6 py-12 sm:gap-4 sm:px-10 sm:py-16 md:gap-12 md:px-16 md:py-24 lg:gap-16 lg:px-24 lg:py-36 xl:gap-20 xl:px-32 xl:py-44 2xl:gap-24 2xl:px-40 2xl:py-52">
+      <div className="flex flex-col gap-2 bg-[#f5efe0] px-6 pb-12 sm:gap-4 sm:px-10 sm:pb-16 md:gap-12 md:px-16 md:pb-24 lg:gap-16 lg:px-24 lg:pb-36 xl:gap-20 xl:px-32 xl:pb-44 2xl:gap-24 2xl:px-40 2xl:pb-52">
         <Title
           className="flex flex-col text-center"
           textColor="secondary"

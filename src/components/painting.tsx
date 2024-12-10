@@ -27,26 +27,37 @@ const Painting = ({
   captionTitle,
   src,
 }: PictureProps) => {
+  const imageRef = useRef(null);
   const containerRef = useRef(null);
 
+  const { scrollYProgress: imageScrollProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "center center"],
+  });
   const { scrollYProgress: containerScrollProgress } = useScroll({
     target: containerRef,
     offset: ["end end", "0.8 0.8"],
   });
 
+  const scaleImage = useTransform(imageScrollProgress, [0, 1], [1.2, 1]);
   const opacity = useTransform(containerScrollProgress, [0, 1], [0, 1]);
 
   return (
     <div className={`flex flex-col ${className}`}>
-      <div className={`relative mt-2 ${aspectRatio}`}>
-        <Image
-          alt={alt}
-          fill
-          style={{ objectFit: "cover" }}
-          src={src}
-          className="z-10"
-          loading="lazy"
-        />
+      <div className={`relative overflow-hidden ${aspectRatio}`} ref={imageRef}>
+        <motion.div
+          className="absolute left-1/2 top-1/2 h-[100%] w-[100%] overflow-hidden [translate:-50%-50%]"
+          style={{ scale: scaleImage }}
+        >
+          <Image
+            alt={alt}
+            fill
+            style={{ objectFit: "cover" }}
+            src={src}
+            className="z-10"
+            loading="lazy"
+          />
+        </motion.div>
       </div>
 
       <motion.div
