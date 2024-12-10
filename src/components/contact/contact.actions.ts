@@ -12,8 +12,7 @@ async function send(formData: FormDataType) {
   try {
     await resend.emails.send({
       from: "Contacto desde el sitio web <onboarding@resend.dev>",
-      // to: ["javier.velilla47@gmail.com", "o.velillaa@gmail.com"],
-      to: ["o.velillaa@gmail.com"],
+      to: ["javier.velilla47@gmail.com", "o.velillaa@gmail.com"],
       replyTo: formData.email,
       subject: "Contacto desde el sitio web",
       react: ContactTemplate(formData),
