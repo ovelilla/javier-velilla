@@ -79,6 +79,7 @@ const messageBox = {
   padding: "24px",
   backgroundColor: "#f2f3f3",
   borderRadius: "4px",
+  whiteSpace: "pre-wrap",
 };
 
 const footer = {
