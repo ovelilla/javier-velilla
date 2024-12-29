@@ -96,12 +96,6 @@ const IMAGES = [
     src: "/retratos/retrato-016.jpg",
   },
   {
-    id: 16,
-    alt: "retrato-017",
-    size: "701-949",
-    src: "/retratos/retrato-017.jpg",
-  },
-  {
     id: 17,
     alt: "retrato-018",
     size: "623-957",
