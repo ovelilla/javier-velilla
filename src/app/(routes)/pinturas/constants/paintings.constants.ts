@@ -17,8 +17,18 @@ const IMAGES = [
     size: "833-1172",
     src: "/galeria/imagen-007.jpg",
   },
-  { id: 8, alt: "imagen-008", size: "868-860", src: "/galeria/imagen-008.jpg" },
-  { id: 9, alt: "imagen-009", size: "830-827", src: "/galeria/imagen-009.jpg" },
+  {
+    id: 8,
+    alt: "imagen-008",
+    size: "1970-1949",
+    src: "/galeria/imagen-008.jpg",
+  },
+  {
+    id: 9,
+    alt: "imagen-009",
+    size: "2010-2048",
+    src: "/galeria/imagen-009.jpg",
+  },
   {
     id: 10,
     alt: "imagen-010",
@@ -100,7 +110,7 @@ const IMAGES = [
   {
     id: 23,
     alt: "imagen-023",
-    size: "637-863",
+    size: "1478-2048",
     src: "/galeria/imagen-023.jpg",
   },
   {
@@ -142,14 +152,8 @@ const IMAGES = [
   {
     id: 30,
     alt: "imagen-030",
-    size: "754-450",
+    size: "2048-1229",
     src: "/galeria/imagen-030.jpg",
-  },
-  {
-    id: 31,
-    alt: "imagen-031",
-    size: "1189-858",
-    src: "/galeria/imagen-031.jpg",
   },
   {
     id: 32,
@@ -168,12 +172,6 @@ const IMAGES = [
     alt: "imagen-034",
     size: "1600-1149",
     src: "/galeria/imagen-034.jpg",
-  },
-  {
-    id: 35,
-    alt: "imagen-035",
-    size: "1600-1134",
-    src: "/galeria/imagen-035.jpg",
   },
   {
     id: 36,
@@ -198,12 +196,6 @@ const IMAGES = [
     alt: "imagen-039",
     size: "1600-1127",
     src: "/galeria/imagen-039.jpg",
-  },
-  {
-    id: 40,
-    alt: "imagen-040",
-    size: "1321-1600",
-    src: "/galeria/imagen-040.jpg",
   },
   {
     id: 41,
@@ -246,12 +238,6 @@ const IMAGES = [
     alt: "imagen-047",
     size: "1600-1122",
     src: "/galeria/imagen-047.jpg",
-  },
-  {
-    id: 48,
-    alt: "imagen-048",
-    size: "754-450",
-    src: "/galeria/imagen-048.jpg",
   },
   {
     id: 49,
@@ -530,12 +516,6 @@ const IMAGES = [
     src: "/galeria/imagen-094.jpg",
   },
   {
-    id: 95,
-    alt: "imagen-095",
-    size: "722-552",
-    src: "/galeria/imagen-095.jpg",
-  },
-  {
     id: 96,
     alt: "imagen-096",
     size: "1434-531",
@@ -612,12 +592,6 @@ const IMAGES = [
     alt: "imagen-108",
     size: "1876-707",
     src: "/galeria/imagen-108.jpg",
-  },
-  {
-    id: 109,
-    alt: "imagen-109",
-    size: "873-700",
-    src: "/galeria/imagen-109.jpg",
   },
   {
     id: 110,

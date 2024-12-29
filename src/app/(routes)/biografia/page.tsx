@@ -54,16 +54,10 @@ const Biography = () => {
       <div className="relative flex flex-col gap-32 bg-[#f5efe0] px-6 py-16 sm:px-8 md:px-12 lg:px-16 lg:py-24 xl:px-24 xl:py-72 2xl:px-40 2xl:pt-[420px]">
         <div className="flex basis-[60%] flex-col items-center gap-12 lg:gap-16 2xl:gap-20">
           <div className="flex flex-col gap-2">
-            <h3
-              className={`flex flex-col text-center text-5xl uppercase text-[#aa580d] md:text-4xl xl:text-6xl ${menoBannerCondensedLight.className}`}
-            >
-              El otro lado de la mirada
-            </h3>
-
             <cite
               className={`text-center text-2xl not-italic text-[#aa580d] md:text-xl xl:text-3xl ${menoBannerCondensedLight.className}`}
             >
-              Por Elena Moreno
+              A. Calderón de Jesús: Analista & Crítico de AR
             </cite>
           </div>
 
@@ -71,23 +65,31 @@ const Biography = () => {
             className={`flex flex-col gap-4 text-center text-2xl text-[#aa580d] lg:max-w-2xl lg:gap-6 2xl:gap-8 2xl:text-3xl ${menoBannerLight.className}`}
           >
             <p>
-              &quot;Hay narraciones secretas e íntimas en la pintura de Javier
-              Velilla. Sus cuadros están habitados por el eco de la búsqueda de
-              algún horizonte irrepetible, y poseen la certeza que imprime esa
-              soledad del viajero que se rinde a la belleza y rescata para otro
-              esa ciudad inmortal, ese equilibrio de color, esa emoción que no
-              se cuenta y solo puede percibirse. Sus pinturas poseen una buena
-              dosis de generosidad disimulada.&quot;
+              &quot;En el panorama artístico, siempre aparece algún artista
+              dispuesto a romper los esquemas, a sabiendas de que sus obras no
+              son transgresoras, tanto por su estilo y temática, sino por esa
+              composición de carácter bíblico, ya que sus obras están en ese
+              terreno de la búsqueda continua de lo inmortal y lo mitológico. En
+              ese equilibrio se desenvuelve casi toda su obra.&quot;
             </p>
             <p>
-              &quot;Apropiarse de la belleza, recordarla incorrupta para
-              finalmente plasmarla en un lienzo no es un acto gratuito para el
-              alma. El aislamiento y la disciplina de su pulso, me obligan a
-              pensar en el tiempo, en ese que él detiene para devolvernos el
-              único horizonte, el momento mágico de esa luz imposible, la
-              levedad de un aire que se convierte en un sutil fondo para
-              entender el realismo de quien habla al otro lado de la
-              mirada.&quot;
+              &quot;Teniendo en sus espectros la concepción del arte
+              imaginativo, ligado a los grandes maestros como Velázquez,
+              Rembrandt y Goya, todo esto bajo una referencia de admiración y
+              pasión por lo que su trabajo representa. La técnica del
+              claroscuro, junto con otros esquemas, transita por sus obras con
+              total garantía.&quot;
+            </p>
+            <p>
+              &quot;En su proceso creativo podemos contemplar también las
+              distintas variantes que le aporta el arte actual, con referencia a
+              la intervención de los ambientes urbanos, siendo en estos momentos
+              el tema más concurrente por aquello de dar prioridad a la hora de
+              retratar las figuras humanas.&quot;
+            </p>
+            <p>
+              &quot;Este artista se ha destapado en los espacios artísticos como
+              buen conductor del llamado arte figurativo.&quot;
             </p>
           </blockquote>
         </div>

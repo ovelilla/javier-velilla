@@ -221,6 +221,30 @@ const IMAGES = [
     size: "606-849",
     src: "/retratos/retrato-037.jpg",
   },
+  {
+    id: 37,
+    alt: "retrato-038",
+    size: "1691-2048",
+    src: "/retratos/retrato-038.jpg",
+  },
+  {
+    id: 38,
+    alt: "retrato-039",
+    size: "1134-2016",
+    src: "/retratos/retrato-039.jpg",
+  },
+  {
+    id: 39,
+    alt: "retrato-040",
+    size: "1134-2016",
+    src: "/retratos/retrato-040.jpg",
+  },
+  {
+    id: 40,
+    alt: "retrato-041",
+    size: "1735-2048",
+    src: "/retratos/retrato-041.jpg",
+  },
 ] as const;
 
 export { IMAGES };

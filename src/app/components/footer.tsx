@@ -39,22 +39,22 @@ const Footer = () => {
           <div className="flex h-full flex-col items-center gap-16 px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-24 lg:py-36 xl:p-40">
             <div className="flex flex-col">
               <div
-                className={`${menoBannerCondensedLight.className} text-center text-4xl uppercase text-white xl:text-5xl 2xl:text-6xl`}
+                className={`${menoBannerCondensedLight.className} text-center text-4xl uppercase text-[#bbcbdc] xl:text-5xl 2xl:text-6xl`}
               >
                 Exposición de pintura en Casa de Vacas
               </div>
-              <div className="text-center text-xl uppercase text-white md:text-xl xl:text-2xl 2xl:text-3xl">
+              <div className="text-center text-xl uppercase text-[#bbcbdc] md:text-xl xl:text-2xl 2xl:text-3xl">
                 28 de noviembre - 29 de diciembre
               </div>
             </div>
 
             <div className="flex flex-col">
               <div
-                className={`${menoBannerCondensedLight.className} text-center text-6xl uppercase text-white md:text-6xl xl:text-7xl 2xl:text-8xl`}
+                className={`${menoBannerCondensedLight.className} text-center text-6xl uppercase text-[#bbcbdc] md:text-6xl xl:text-7xl 2xl:text-8xl`}
               >
                 Madrid
               </div>
-              <div className="text-center text-white md:text-xl xl:text-2xl 2xl:text-3xl">
+              <div className="text-center text-[#bbcbdc] md:text-xl xl:text-2xl 2xl:text-3xl">
                 P.º de Colombia, Retiro, 28009 Madrid
               </div>
             </div>
@@ -68,7 +68,7 @@ const Footer = () => {
               <span>Portfolio</span>
             </button>
 
-            <div className="flex flex-col gap-2 uppercase text-white md:text-lg lg:items-center xl:text-xl 2xl:text-2xl">
+            <div className="flex flex-col gap-2 uppercase text-[#bbcbdc] md:text-lg lg:items-center xl:text-xl 2xl:text-2xl">
               <div>Redes Sociales</div>
               <div className="flex gap-4">
                 <a
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 transform whitespace-nowrap py-2 lgpy-4 text-white">
+          <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 transform whitespace-nowrap py-2 lgpy-4 text-[#bbcbdc]">
             © {new Date().getFullYear()} Javier Velilla. All rights reserved.
           </div>
         </div>
