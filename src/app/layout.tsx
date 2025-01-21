@@ -2,6 +2,7 @@
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // Components
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
