@@ -745,4 +745,5 @@ const IMAGES = [
   },
 ] as const;
 
+
 export { IMAGES };
