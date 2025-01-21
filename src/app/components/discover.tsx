@@ -41,10 +41,10 @@ const Discover = () => {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(288px,1fr))] gap-20 2xl:gap-48">
           <Painting
-            alt="San Simeone, Siria"
+            alt="San Simeon, Siria"
             aspectRatio="aspect-[4/3]"
             captionDescription="100 x 100 cm - Acrílico sobre lienzo"
-            captionTitle="San Simeone, Siria"
+            captionTitle="San Simeon, Siria"
             src="/galeria/imagen-104.jpg"
           />
 

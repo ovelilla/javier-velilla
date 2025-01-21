@@ -37,7 +37,7 @@ const Footer = () => {
       <footer className="relative flex flex-col bg-[#0e1822] lg:min-h-screen lg:flex-row">
         <div className="relative shrink-0 lg:basis-1/2">
           <div className="flex h-full flex-col items-center gap-16 px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-24 lg:py-36 xl:p-40">
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <div
                 className={`${menoBannerCondensedLight.className} text-center text-4xl uppercase text-[#bbcbdc] xl:text-5xl 2xl:text-6xl`}
               >
@@ -57,7 +57,7 @@ const Footer = () => {
               <div className="text-center text-[#bbcbdc] md:text-xl xl:text-2xl 2xl:text-3xl">
                 P.º de Colombia, Retiro, 28009 Madrid
               </div>
-            </div>
+            </div> */}
 
             <button
               onClick={handleDownload}
@@ -72,14 +72,14 @@ const Footer = () => {
               <div>Redes Sociales</div>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com/javier.velilla"
+                  href="https://www.instagram.com/josegayanyahoo.es/"
                   className="flex h-10 w-10 items-center justify-center"
                   aria-label="Instagram"
                 >
                   <SiInstagram size={isSm ? (isMd ? 32 : 28) : 24} />
                 </a>
                 <a
-                  href="https://facebook.com/javier.velilla"
+                  href="https://www.facebook.com/profile.php?id=61571512024781"
                   className="flex h-10 w-10 items-center justify-center"
                   aria-label="Facebook"
                 >
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 transform whitespace-nowrap py-2 lgpy-4 text-[#bbcbdc]">
+          <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 transform whitespace-nowrap py-2 text-[#bbcbdc] lg:py-4">
             © {new Date().getFullYear()} Javier Velilla. All rights reserved.
           </div>
         </div>

@@ -198,9 +198,15 @@ const IMAGES = [
     src: "/galeria/imagen-039.jpg",
   },
   {
+    id: 40,
+    alt: "imagen-040",
+    size: "4092-4494",
+    src: "/galeria/imagen-040.jpg",
+  },
+  {
     id: 41,
     alt: "imagen-041",
-    size: "1607-1665",
+    size: "4328-4768",
     src: "/galeria/imagen-041.jpg",
   },
   {
@@ -226,12 +232,6 @@ const IMAGES = [
     alt: "imagen-045",
     size: "1600-1230",
     src: "/galeria/imagen-045.jpg",
-  },
-  {
-    id: 46,
-    alt: "imagen-046",
-    size: "958-1533",
-    src: "/galeria/imagen-046.jpg",
   },
   {
     id: 47,
@@ -386,19 +386,19 @@ const IMAGES = [
   {
     id: 73,
     alt: "imagen-073",
-    size: "1715-461",
+    size: "3696-4128",
     src: "/galeria/imagen-073.jpg",
   },
   {
     id: 74,
     alt: "imagen-074",
-    size: "1677-449",
+    size: "3760-4152",
     src: "/galeria/imagen-074.jpg",
   },
   {
     id: 75,
     alt: "imagen-075",
-    size: "1740-474",
+    size: "4152-4552",
     src: "/galeria/imagen-075.jpg",
   },
   {
@@ -410,7 +410,7 @@ const IMAGES = [
   {
     id: 77,
     alt: "imagen-077",
-    size: "1491-394",
+    size: "2420-2604",
     src: "/galeria/imagen-077.jpg",
   },
   {
@@ -440,7 +440,7 @@ const IMAGES = [
   {
     id: 82,
     alt: "imagen-082",
-    size: "1485-399",
+    size: "4136-4568",
     src: "/galeria/imagen-082.jpg",
   },
   {
@@ -454,12 +454,6 @@ const IMAGES = [
     alt: "imagen-084",
     size: "1314-660",
     src: "/galeria/imagen-084.jpg",
-  },
-  {
-    id: 85,
-    alt: "imagen-085",
-    size: "702-502",
-    src: "/galeria/imagen-085.jpg",
   },
   {
     id: 86,
@@ -482,7 +476,7 @@ const IMAGES = [
   {
     id: 89,
     alt: "imagen-089",
-    size: "1631-433",
+    size: "2972-3252",
     src: "/galeria/imagen-089.jpg",
   },
   {
@@ -514,12 +508,6 @@ const IMAGES = [
     alt: "imagen-094",
     size: "669-524",
     src: "/galeria/imagen-094.jpg",
-  },
-  {
-    id: 96,
-    alt: "imagen-096",
-    size: "1434-531",
-    src: "/galeria/imagen-096.jpg",
   },
   {
     id: 97,
@@ -598,6 +586,162 @@ const IMAGES = [
     alt: "imagen-110",
     size: "836-648",
     src: "/galeria/imagen-110.jpg",
+  },
+  {
+    id: 111,
+    alt: "imagen-111",
+    size: "1852-1647",
+    src: "/galeria/imagen-111.jpg",
+  },
+  {
+    id: 112,
+    alt: "imagen-112",
+    size: "1555-2048",
+    src: "/galeria/imagen-112.jpg",
+  },
+  {
+    id: 113,
+    alt: "imagen-113",
+    size: "2652-2106",
+    src: "/galeria/imagen-113.jpg",
+  },
+  {
+    id: 114,
+    alt: "imagen-114",
+    size: "2362-1783",
+    src: "/galeria/imagen-114.jpg",
+  },
+  {
+    id: 115,
+    alt: "imagen-115",
+    size: "2831-2077",
+    src: "/galeria/imagen-115.jpg",
+  },
+  {
+    id: 116,
+    alt: "imagen-116",
+    size: "2890-2086",
+    src: "/galeria/imagen-116.jpg",
+  },
+  {
+    id: 117,
+    alt: "imagen-117",
+    size: "2403-1472",
+    src: "/galeria/imagen-117.jpg",
+  },
+  {
+    id: 118,
+    alt: "imagen-118",
+    size: "2652-1190",
+    src: "/galeria/imagen-118.jpg",
+  },
+  {
+    id: 119,
+    alt: "imagen-119",
+    size: "1755-1376",
+    src: "/galeria/imagen-119.jpg",
+  },
+  {
+    id: 120,
+    alt: "imagen-120",
+    size: "3138-1179",
+    src: "/galeria/imagen-120.jpg",
+  },
+  {
+    id: 121,
+    alt: "imagen-121",
+    size: "891-383",
+    src: "/galeria/imagen-121.jpg",
+  },
+  {
+    id: 122,
+    alt: "imagen-122",
+    size: "849-589",
+    src: "/galeria/imagen-122.jpg",
+  },
+  {
+    id: 123,
+    alt: "imagen-123",
+    size: "765-672",
+    src: "/galeria/imagen-123.jpg",
+  },
+  {
+    id: 124,
+    alt: "imagen-124",
+    size: "698-484",
+    src: "/galeria/imagen-124.jpg",
+  },
+  {
+    id: 125,
+    alt: "imagen-125",
+    size: "692-490",
+    src: "/galeria/imagen-125.jpg",
+  },
+  {
+    id: 126,
+    alt: "imagen-126",
+    size: "1888-1488",
+    src: "/galeria/imagen-126.jpg",
+  },
+  {
+    id: 127,
+    alt: "imagen-127",
+    size: "2559-2064",
+    src: "/galeria/imagen-127.jpg",
+  },
+  {
+    id: 128,
+    alt: "imagen-128",
+    size: "599-860",
+    src: "/galeria/imagen-128.jpg",
+  },
+  {
+    id: 129,
+    alt: "imagen-129",
+    size: "766-1023",
+    src: "/galeria/imagen-129.jpg",
+  },
+  {
+    id: 130,
+    alt: "imagen-130",
+    size: "700-501",
+    src: "/galeria/imagen-130.jpg",
+  },
+  {
+    id: 131,
+    alt: "imagen-131",
+    size: "531-644",
+    src: "/galeria/imagen-131.jpg",
+  },
+  {
+    id: 132,
+    alt: "imagen-132",
+    size: "769-829",
+    src: "/galeria/imagen-132.jpg",
+  },
+  {
+    id: 133,
+    alt: "imagen-133",
+    size: "479-778",
+    src: "/galeria/imagen-133.jpg",
+  },
+  {
+    id: 134,
+    alt: "imagen-134",
+    size: "929-768",
+    src: "/galeria/imagen-134.jpg",
+  },
+  {
+    id: 135,
+    alt: "imagen-135",
+    size: "1080-1075",
+    src: "/galeria/imagen-135.jpg",
+  },
+  {
+    id: 136,
+    alt: "imagen-136",
+    size: "964-371",
+    src: "/galeria/imagen-136.jpg",
   },
 ] as const;
 
