@@ -3,16 +3,16 @@
 // Vendors
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 // Components
 // Icons
 import { SiInstagram, SiFacebook } from "react-icons/si";
 // Hooks
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
-const menoBannerCondensedLight = localFont({
-  src: "../fonts/meno-banner-condensed-light.woff2",
-});
+// const menoBannerCondensedLight = localFont({
+//   src: "../fonts/meno-banner-condensed-light.woff2",
+// });
 const Footer = () => {
   const isSm = useMediaQuery("(min-width: 640px)");
   const isMd = useMediaQuery("(min-width: 768px)");
