@@ -270,12 +270,6 @@ const IMAGES = [
     src: "/galeria/imagen-053.jpg",
   },
   {
-    id: 54,
-    alt: "imagen-054",
-    size: "1600-804",
-    src: "/galeria/imagen-054.jpg",
-  },
-  {
     id: 55,
     alt: "imagen-055",
     size: "1600-1181",

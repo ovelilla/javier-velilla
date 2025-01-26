@@ -43,7 +43,7 @@ const Discover = () => {
           <Painting
             alt="San Simeon, Siria"
             aspectRatio="aspect-[4/3]"
-            captionDescription="100 x 100 cm - Acrílico sobre lienzo"
+            captionDescription="Acrílico sobre lienzo"
             captionTitle="San Simeon, Siria"
             src="/galeria/imagen-104.jpg"
           />
@@ -51,7 +51,7 @@ const Discover = () => {
           <Painting
             alt="El Retiro, Madrid"
             aspectRatio="aspect-[4/3]"
-            captionDescription="100 x 100 cm - Acrílico sobre lienzo"
+            captionDescription="Acrílico sobre lienzo"
             captionTitle="El Retiro, Madrid"
             src="/galeria/imagen-102.jpg"
           />
@@ -80,15 +80,15 @@ const Discover = () => {
           <Painting
             alt="Pascal"
             aspectRatio="aspect-[4/3]"
-            captionDescription="100 x 100 cm - Acrílico sobre lienzo"
+            captionDescription="Acrílico sobre lienzo"
             captionTitle="Pascal"
-            src="/retratos/retrato-003.jpg"
+            src="/principal/retrato-032.jpg"
           />
 
           <Painting
             alt="Oscar"
             aspectRatio="aspect-[4/3]"
-            captionDescription="100 x 100 cm - Acrílico sobre lienzo"
+            captionDescription="Acrílico sobre lienzo"
             captionTitle="Oscar"
             src="/retratos/retrato-002.jpg"
           />

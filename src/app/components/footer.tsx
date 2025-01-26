@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     containerRendered && (
-      <footer className="relative flex flex-col bg-[#0e1822] lg:min-h-screen lg:flex-row">
+      <footer className="relative flex flex-col bg-[#0e1822]  lg:flex-row">
         <div className="relative shrink-0 lg:basis-1/2">
           <div className="flex h-full flex-col items-center gap-16 px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-24 lg:py-36 xl:p-40">
             {/* <div className="flex flex-col">
