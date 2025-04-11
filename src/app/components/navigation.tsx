@@ -34,6 +34,11 @@ const items = [
   },
   {
     id: 4,
+    title: "Exposiciones",
+    link: "/exposiciones",
+  },
+  {
+    id: 5,
     title: "Contacto",
     link: "/contacto",
   },
