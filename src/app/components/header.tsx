@@ -21,13 +21,13 @@ const barVariants = {
     rotate: 0,
     y: 0,
     x: 0,
-    transition: { duration: 0.3, ease: "easeInOut" },
+    transition: { duration: 0.3, ease: "easeInOut" as const },
   },
   open: (custom: number) => ({
     rotate: custom === 0 ? -45 : 45,
     y: custom === 0 ? -7 : 7,
     x: custom === 0 ? -7 : -7,
-    transition: { duration: 0.3, ease: "easeInOut" },
+    transition: { duration: 0.3, ease: "easeInOut" as const },
   }),
 };
 
@@ -37,7 +37,7 @@ const barVariantsSm = {
     rotate: custom === 0 ? -45 : 45,
     y: custom === 0 ? -10 : 10,
     x: custom === 0 ? -10 : -10,
-    transition: { duration: 0.3, ease: "easeInOut" },
+    transition: { duration: 0.3, ease: "easeInOut" as const },
   }),
 };
 
@@ -47,7 +47,7 @@ const barVariantsMd = {
     rotate: custom === 0 ? -45 : 45,
     y: custom === 0 ? -11 : 10,
     x: custom === 0 ? -10 : -10,
-    transition: { duration: 0.3, ease: "easeInOut" },
+    transition: { duration: 0.3, ease: "easeInOut" as const },
   }),
 };
 
