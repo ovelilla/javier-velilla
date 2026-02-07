@@ -1,11 +1,16 @@
 const IMAGES = [
   {
+    id: 137,
+    alt: "imagen-137",
+    size: "2376-1796",
+    src: "/galeria/imagen-137.jpg",
+  },
+  {
     id: 0,
     alt: "imagen-000",
     size: "1600-829",
     src: "/galeria/imagen-000.jpg",
   },
-
   {
     id: 13,
     alt: "imagen-013",
@@ -305,12 +310,6 @@ const IMAGES = [
     alt: "imagen-097",
     size: "2095-1623",
     src: "/galeria/imagen-097.jpg",
-  },
-  {
-    id: 71,
-    alt: "imagen-071",
-    size: "1600-1239",
-    src: "/galeria/imagen-071.jpg",
   },
   {
     id: 30,
