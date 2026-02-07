@@ -14,14 +14,14 @@ const overlayVariants = {
     background: "rgba(0, 0, 0, 0.5)",
     transition: {
       duration: 0.3,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
   closed: {
     background: "rgba(0, 0, 0, 0)",
     transition: {
       duration: 0.3,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
@@ -72,7 +72,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         is2Xl,
       })} 56px)`,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 15,
         restDelta: 2,
       },
@@ -86,7 +86,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         is2Xl,
       })} 56px)`,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 20,
       },
